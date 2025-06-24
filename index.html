@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vicodaf Safaris</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #fdfcf9; color: #1a1a1a; scroll-behavior: smooth; }
+    .navbar { background: #0b2239; position: sticky; top: 0; z-index: 1000; }
+    .navbar-container { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; max-width: 1200px; margin: auto; }
+    .navbar-logo { color: white; font-size: 20px; font-weight: bold; text-decoration: none; }
+    .navbar-menu { display: flex; list-style: none; gap: 20px; }
+    .navbar-menu li a { color: white; text-decoration: none; font-weight: bold; font-size: 16px; }
+    .navbar-menu li a:hover { color: #fbb03b; }
+    .menu-toggle { display: none; color: white; font-size: 24px; cursor: pointer; }
+    @media (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background: #0b2239;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 250px;
+        padding: 20px;
+        border-radius: 0 0 0 10px;
+      }
+      .navbar-menu.active { display: flex; }
+      .menu-toggle { display: block; }
+      .menu-close {
+        display: block;
+        color: white;
+        font-size: 24px;
+        align-self: flex-end;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+    }
+    header { background: #0b2239; text-align: center; padding: 60px 20px; color: white; }
+    header img { width: 120px; border-radius: 50%; margin-bottom: 20px; }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; }
+    .slideshow-container { position: relative; max-width: 100%; height: 570px; overflow: hidden; }
+    .slide { display: none; width: 100%; height: 100%; }
+    .slide img { 
+       width: 100%; 
+       height: 100%; 
+       object-fit: cover; 
+       filter: sepia(70%);
+    }
+    section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+    section h2 { text-align: center; color: #0b2239; margin-bottom: 30px; }
+    .packages, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card h3, .card p { padding: 15px; margin: 0; }
+    iframe { width: 100%; height: ; border-radius: 10px; border: none; }
+    .feedbacks { background-color: #fff8ed; }
+    .feedback-slide { display: flex; overflow-x: auto; gap: 20px; padding: 20px 0; }
+    .feedback { min-width: 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+    .feedback img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
+    .feedback p { font-style: italic; }
+    .feedback h4 { margin-top: 10px; color: #0b2239; }
+    footer { background-color: #0b2239; color: white; padding: 40px 20px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .footer-grid h4 { color: #fbb03b; margin-bottom: 10px; }
+    .social-icons a { color: white; font-size: 1.4em; margin-right: 10px; text-decoration: none; }
+    .developer { text-align: center; border-top: 1px solid #444; padding-top: 10px; }
+    .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; padding: 15px; font-size: 24px;    z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+    .whatsapp-btn:hover { background-color: #128c7e; }
+    @media (max-width: 768px) {
+      .slideshow-container {
+       height: 350px; 
+      }
+  </style>
+</head>
+<body id="home">
+<div class="navbar">
+  <div class="navbar-container">
+    <a href="#home" class="navbar-logo">Vicodaf Safaris</a>
+    <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    <ul class="navbar-menu" id="navMenu">
+      <div class="menu-close" onclick="collapseMenu()"><i class="fas fa-times"></i></div>
+      <li><a href="#home" onclick="collapseMenu()">Home</a></li>
+      <li><a href="#packages" onclick="collapseMenu()">Our Tour Packages</a></li>
+      <li><a href="#about" onclick="collapseMenu()">About Us</a></li>
+      <li><a href="#gallery" onclick="collapseMenu()">Gallery</a></li>
+      <li><a href="#book" onclick="collapseMenu()">Book Your Adventure</a></li>
+      <li><a href="#contact" onclick="collapseMenu()">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+<a href="https://wa.me/679515834?text=Hello Vicodaf Safaris. (Message Initiated from Website)" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<header>
+  <img src="images/vicodaf_logo.png" alt="Vicodaf Logo">
+  <h1>Vicodaf Safaris</h1>
+  <p>Overhappiness With Us - Explore Tanzania</p>
+</header>
+<div class="slideshow-container">
+  <div class="slide" style="display:block;"><img src="images/serengeti_slideshow.jpg" alt="Serengeti"></div>
+  <div class="slide"><img src="images/ngorongoro_slideshow.jpg" alt="Ngorongoro"></div>
+  <div class="slide"><img src="images/manyara_slideshow.webp" alt="Manyara"></div>
+</div>
+
+<section id="packages">
+  <h2>Our
+ Tour Packages</h2>
+  <div class="packages">
+    <div class="card"><img src="images/serengeti.png"><h3>Serengeti Safari</h3><p>3 Days Wildlife Experience</p></div>
+    <div class="card"><img src="images/ngoro.jpg"><h3>Ngorongoro Crater</h3><p>Day Trip into the Crater</p></div>
+    <div class="card"><img src="images/lakeeyasi.jpg"><h3>Lake Eyasi</h3><p>Hadzabe & Datoga Cultural Tour</p></div>
+    <div class="card"><img src="images/tarangire.jpg"><h3>Tarangire Park</h3><p>Big Elephants and Baobabs</p></div>
+    <div class="card"><img src="images/manyara_slideshow.webp"><h3>Lake Manyara</h3><p>Tree-Climbing Lions Adventure</p></div>
+    <div class="card"><img src="images/arusha.jpg"><h3>Arusha Park</h3><p>Close-Up Safari Views</p></div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p style="text-align:center; max-width:800px; margin:auto;">Vicodaf Safaris is a local Tanzanian tour company based in Arusha, dedicated to providing unforgettable travel experiences. We specialize in wildlife safaris, cultural tours, and mountain climbing packages across Tanzania.</p>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="gallery/img7.jpg" style="width:100%; height:300px; border-radius:10px;">
+    <img src="gallery/img8.jpg" style="width:100%; height:300px; border-radius:10px;">
+    <img src="gallery/img9.jpg" style="width:100%; height:300px; border-radius:10px;">
+    <img src="gallery/img4.jpg" style="width:100%; height:300px; border-radius:10px;">
+    <img src="gallery/img5.jpg" style="width:100%; height:300px; border-radius:10px;">
+    <img src="gallery/img6.jpg" style="width:100%; height:300px; border-radius:10px;">
+    <img src="gallery/img10.jpg" style="width:100%; height:350px; border-radius:10px;">
+    <img src="gallery/img11.jpg" style="width:100%; height:350px; border-radius:10px;">
+    <img src="gallery/img16.jpg" style="width:100%; height:350px; border-radius:10px;">
+    <img src="gallery/img18.jpg" style="width:100%; height:300px; border-radius:10px;">
+    <img src="gallery/img1.jpg" style="width:100%; height:300px; border-radius:10px;">
+    <img src="gallery/img21.jpg" style="width:100%; height:300px; border-radius:10px;">
+  </div>
+</section>
+
+<section id="book">
+  <h2>Book Your Adventure</h2>
+  <p style="text-align:center;">Please fill out the form below:</p>
+<div style="max-width: 600px; margin: auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); font-family: 'Poppins', sans-serif;">
+
+  <h2 style="text-align: center; color: #0b2239; margin-bottom: 20px;">Book Your Adventure</h2>
+
+  <form action="https://formsubmit.co/nasalprog@gmail.com" method="POST">
+    <!-- Hidden Fields -->
+    <input type="hidden" name="_next" value="https://kizenga-technologies.github.io/vicodaf_safaris/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Email -->
+    <label>Email:</label>
+    <input type="email" name="Email" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+
+    <!-- Full Name -->
+    <label>Full Name:</label>
+    <input type="text" name="Full Name" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+
+    <!-- Phone Number -->
+    <label>WhatsApp / Phone Number:</label>
+    <input type="tel" name="Phone Number" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+
+    <!-- Tour Package -->
+    <label>Select Tour Package:</label>
+    <select name="Tour Package" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+      <option value="" disabled selected>Select a package</option>
+      <option>3 Days Serengeti Safari</option>
+      <option>Ngorongoro Crater Day Trip</option>
+      <option>Lake Eyasi, Hadzabe and Datoga Cultural Tour</option>
+      <option>Tarangire Park, Big Elephants and Baobabs</option>
+      <option>Lake Manyara, Tree-Climbing Lions Adventure</option>
+      <option>Arusha Park, Close-Up Safari Views</option>
+    </select>
+
+    <!-- Number of People -->
+    <label>Number of People:</label>
+    <input type="number" name="Number of People" min="1" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+
+    <!-- Travel Date -->
+    <label>Preferred Travel Date:</label>
+    <input type="date" name="Preferred Travel Date" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+
+    <!-- Notes -->
+    <label>Additional Notes or Questions:</label>
+    <textarea name="Notes" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 25px;"></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" style="width: 100%; background: #0b2239; color: white; padding: 14px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">
+      Submit Booking
+    </button>
+  </form>
+</div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p style="text-align:center;">Location: Sakina Street, Arusha, Tanzania</p>
+  <iframe src="https://maps.google.com/maps?q=Sakina%20Street,%20Arusha,%20Tanzania&t=&z=13&ie=UTF8&iwloc=&output=embed" height="400"></iframe>
+</section>
+
+<section class="feedbacks">
+  <h2 style="text-align:center; color:#0b2239;">What Our Customers Say</h2>
+  <div id="feedbackSlideshow" style="max-width: 700px; margin: auto; position: relative;">
+    <div class="feedback-slide" style="display: block; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center;">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+      <p style="font-style: italic;">"The best safari of my life! Vicodaf made everything smooth."</p>
+      <h4 style="color: #0b2239; margin-top: 10px;">- John, USA</h4>
+    </div>
+
+    <div class="feedback-slide" style="display: none; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center;">
+      <img src="images/amina.jpg" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+      <p style="font-style: italic;">"Professional, friendly, and unforgettable experience!"</p>
+      <h4 style="color: #0b2239; margin-top: 10px;">- Amina, Kenya</h4>
+    </div>
+
+    <div class="feedback-slide" style="display: none; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center;">
+      <img src="https://randomuser.me/api/portraits/women/65.jpg" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+      <p style="font-style: italic;">"Serengeti honeymoon with Vicodaf was simply magical."</p>
+      <h4 style="color: #0b2239; margin-top: 10px;">- Pierre & Lucie, France</h4>
+    </div>
+  </div>
+</section>
+
+<script>
+let currentFeedback = 0;
+const feedbacks = document.querySelectorAll('.feedback-slide');
+
+function showNextFeedback() {
+  feedbacks[currentFeedback].style.display = 'none';
+  currentFeedback = (currentFeedback + 1) % feedbacks.length;
+  feedbacks[currentFeedback].style.display = 'block';
+}
+
+setInterval(showNextFeedback, 4000); // Change feedback every 4 seconds
+</script>
+
+<footer>
+  <div class="footer-grid">
+    <div><h4>Contact</h4><p>Phone: +255 679 515 834</p><p>Email: info@vicodafsafaris.co.tz</p></div>
+    <div><h4>Working Hours</h4><p>Mon - Fri: 8:00 AM - 6:00 PM</p><p>Sat: 9:00 AM - 2:00 PM</p><p>Sun: Closed</p></div>
+    <div><h4>Social Media</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61577646479957"><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-youtube"></i></a>
+        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/679515834?text=Hello Vicodaf Safaris. (Message Initiated from Website)"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div><h4>This Website Developed by</h4><p><strong>Kizenga Technologies</strong></p><p><a href="#" style="color:#fbb03b;">www.kizengatechnologies.co.tz</a></p></div>
+  </div>
+  <div class="developer">
+    <p>&copy; 2025 Vicodaf Safaris. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+let slideIndex = 0;
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 4000);
+}
+showSlides();
+function toggleMenu() {
+  const nav = document.getElementById("navMenu");
+  nav.classList.toggle("active");
+}
+function collapseMenu() {
+  const nav = document.getElementById("navMenu");
+  if (window.innerWidth <= 768) {
+    nav.classList.remove("active");
+  }
+}
+</script>
+</body>
+</html>
