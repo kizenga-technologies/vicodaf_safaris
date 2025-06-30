@@ -98,11 +98,41 @@
   <h1>Vicodaf Safaris</h1>
   <p>Overhappiness With Us - Explore Tanzania</p>
 </header>
-<div class="slideshow-container">
-  <div class="slide" style="display:block;"><img src="images/serengeti_slideshow.jpg" alt="Serengeti"></div>
-  <div class="slide"><img src="images/ngorongoro_slideshow.jpg" alt="Ngorongoro"></div>
-  <div class="slide"><img src="images/manyara_slideshow.webp" alt="Manyara"></div>
+
+  <div id="heroSlider" style="position: relative; overflow: hidden; max-width: 100%; height: 600px;">
+
+  <!-- Slide 1 -->
+  <div class="heroSlide" style="position: absolute; top: 0; left: 0; width:100%; height:100%; display: flex; align-items:center; justify-content:center; transition: opacity 1s;">
+    <img src="images/serengeti.jpg" alt="Serengeti" style="width:100%; height:100%; object-fit:cover; filter: brightness(70%);">
+    <div style="position:absolute; text-align:center; color:white; padding:20px;">
+      <h2 style="font-size:2.5em; margin-bottom:10px;">Explore the Serengeti</h2>
+      <p style="font-size:1.2em; margin-bottom:20px;">3 Days Wildlife Experience</p>
+      <a href="#book" style="background:#fbb03b; color:#0b2239; padding:12px 25px; border-radius:5px; font-size:1em; text-decoration:none;">Book Now</a>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="heroSlide" style="position: absolute; top: 0; left: 0; width:100%; height:100%; opacity:0; display: flex; align-items:center; justify-content:center; transition: opacity 1s;">
+    <img src="images/ngorongoro.jpg" alt="Ngorongoro" style="width:100%; height:100%; object-fit:cover; filter: brightness(70%);">
+    <div style="position:absolute; text-align:center; color:white; padding:20px;">
+      <h2 style="font-size:2.5em; margin-bottom:10px;">Visit Ngorongoro Crater</h2>
+      <p style="font-size:1.2em; margin-bottom:20px;">Day Trip into the Crater</p>
+      <a href="#book" style="background:#fbb03b; color:#0b2239; padding:12px 25px; border-radius:5px; font-size:1em; text-decoration:none;">Reserve Now</a>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="heroSlide" style="position: absolute; top: 0; left: 0; width:100%; height:100%; opacity:0; display: flex; align-items:center; justify-content:center; transition: opacity 1s;">
+    <img src="images/manyara.jpg" alt="Manyara" style="width:100%; height:100%; object-fit:cover; filter: brightness(70%);">
+    <div style="position:absolute; text-align:center; color:white; padding:20px;">
+      <h2 style="font-size:2.5em; margin-bottom:10px;">Discover Lake Manyara</h2>
+      <p style="font-size:1.2em; margin-bottom:20px;">Tree-Climbing Lions Adventure</p>
+      <a href="#book" style="background:#fbb03b; color:#0b2239; padding:12px 25px; border-radius:5px; font-size:1em; text-decoration:none;">Explore Now</a>
+    </div>
+  </div>
+
 </div>
+
 
 <section id="packages">
   <h2>Our
