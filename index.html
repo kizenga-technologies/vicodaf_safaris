@@ -133,6 +133,20 @@
 
 </div>
 
+  <script>
+  let currentHero = 0;
+  const slides = document.querySelectorAll('.heroSlide');
+
+  function cycleHero() {
+    slides[currentHero].style.opacity = 0;
+    currentHero = (currentHero + 1) % slides.length;
+    slides[currentHero].style.opacity = 1;
+  }
+
+  // Start auto slideshow
+  setInterval(cycleHero, 5000);
+</script>
+
 
 <section id="packages">
   <h2>Our
