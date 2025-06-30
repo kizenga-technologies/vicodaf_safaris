@@ -37,10 +37,25 @@
         cursor: pointer;
       }
     }
-    header { background: #0b2239; text-align: center; padding: 60px 20px; color: white; }
-    header img { width: 120px; border-radius: 50%; margin-bottom: 20px; }
-    header h1 { font-size: 2.5em; margin-bottom: 10px; }
-    header p { font-size: 1.2em; }
+    
+     @media (max-width: 768px) {
+    header {
+      padding: 25px 10px;
+    }
+
+    header img {
+      width: 70px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 1.6em;
+    }
+
+    header p {
+      font-size: 0.95em;
+    }
+  }
     .slideshow-container { position: relative; max-width: 100%; height: 570px; overflow: hidden; }
     .slide { display: none; width: 100%; height: 100%; }
     .slide img { 
@@ -93,10 +108,11 @@
 </div>
 <a href="https://wa.me/679515834?text=Hello Vicodaf Safaris. (Message Initiated from Website)" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-<header>
-  <img src="images/vicodaf_logo.png" alt="Vicodaf Logo">
-  <h1>Vicodaf Safaris</h1>
-  <p>Overhappiness With Us - Explore Tanzania</p>
+<header style="background: #0b2239; text-align: center; padding: 40px 20px; color: white;">
+  <img src="images/vicodaf_logo.png" alt="Vicodaf Logo"
+    style="width: 90px; border-radius: 50%; margin-bottom: 15px;">
+  <h1 style="font-size: 2em; margin-bottom: 8px;">Vicodaf Safaris</h1>
+  <p style="font-size: 1em;">Overhappiness With Us - Explore Tanzania</p>
 </header>
 
   <div id="heroSlider" style="position: relative; overflow: hidden; max-width: 100%; height: 600px;">
