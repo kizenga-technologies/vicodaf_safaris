@@ -78,8 +78,7 @@
     .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; padding: 15px; font-size: 24px;    z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
     .whatsapp-btn:hover { background-color: #128c7e; }
     
-/* Zoom-in animation */
-  @keyframes zoomSlide {
+@keyframes zoomSlide {
     0% { transform: scale(1); }
     100% { transform: scale(1.1); }
   }
@@ -100,6 +99,7 @@
     align-items: center;
     justify-content: center;
     transition: opacity 1s ease-in-out;
+    z-index: 0;
   }
 
   .heroSlide.active {
@@ -112,10 +112,13 @@
     height: 100%;
     object-fit: cover;
     filter: brightness(70%);
-    animation: zoomSlide 10s ease-in-out forwards;
   }
 
-  .heroSlide .text-overlay {
+  .zooming {
+    animation: zoomSlide 10s ease-in-out infinite alternate;
+  }
+
+  .text-overlay {
     position: absolute;
     text-align: center;
     color: white;
@@ -141,7 +144,6 @@
     text-decoration: none;
   }
 
-  /* Responsive fix */
   @media (max-width: 768px) {
     #heroSlider { height: 300px; }
     .heroSlide h2 { font-size: 1.5em; }
@@ -207,20 +209,35 @@
       <a href="#book">Explore Now</a>
     </div>
   </div>
+
 </div>
 
-
-  <script>
+<script>
   let slideIndex = 0;
   const slides = document.querySelectorAll('.heroSlide');
 
   function showSlide() {
-    slides.forEach(slide => slide.classList.remove('active'));
+    slides.forEach((slide, index) => {
+      const img = slide.querySelector('img');
+      slide.classList.remove('active');
+      img.classList.remove('zooming');
+    });
+
     slideIndex = (slideIndex + 1) % slides.length;
-    slides[slideIndex].classList.add('active');
+    const currentSlide = slides[slideIndex];
+    currentSlide.classList.add('active');
+
+    // Force restart animation
+    const img = currentSlide.querySelector('img');
+    void img.offsetWidth; // Trigger reflow
+    img.classList.add('zooming');
   }
 
   setInterval(showSlide, 6000);
+
+  // Initial zoom start
+  const firstImg = document.querySelector('.heroSlide.active img');
+  firstImg.classList.add('zooming');
 </script>
 
 
