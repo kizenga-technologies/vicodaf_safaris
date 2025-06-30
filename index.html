@@ -77,34 +77,80 @@
     .developer { text-align: center; border-top: 1px solid #444; padding-top: 10px; }
     .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; padding: 15px; font-size: 24px;    z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
     .whatsapp-btn:hover { background-color: #128c7e; }
-    @media (max-width: 768px) {
-      .slideshow-container {
-       height: 350px; 
-      }
+    
+/* Zoom-in animation */
+  @keyframes zoomSlide {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
 
-       @media (max-width: 768px) {
-    #heroSlider {
-      height: 300px !important;
-    }
+  #heroSlider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: 600px;
+  }
 
-    #heroSlider h2 {
-      font-size: 1.5em !important;
-    }
+  .heroSlide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-in-out;
+  }
 
-    #heroSlider p {
-      font-size: 1em !important;
-    }
+  .heroSlide.active {
+    opacity: 1;
+    z-index: 1;
+  }
 
-    #heroSlider a {
-      font-size: 0.9em !important;
-      padding: 10px 20px !important;
-    }
+  .heroSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    animation: zoomSlide 10s ease-in-out forwards;
+  }
+
+  .heroSlide .text-overlay {
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+
+  .heroSlide h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  .heroSlide p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .heroSlide a {
+    background: #fbb03b;
+    color: #0b2239;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  /* Responsive fix */
+  @media (max-width: 768px) {
+    #heroSlider { height: 300px; }
+    .heroSlide h2 { font-size: 1.5em; }
+    .heroSlide p { font-size: 1em; }
+    .heroSlide a { font-size: 0.9em; padding: 10px 20px; }
   }
 
   @media (max-width: 480px) {
-    #heroSlider {
-      height: 300px !important;
-    }
+    #heroSlider { height: 220px; }
   }
   </style>
 </head>
@@ -133,52 +179,48 @@
   <p style="font-size: 1em;">Overhappiness With Us - Explore Tanzania</p>
 </header>
 
-  <div id="heroSlider" style="position: relative; overflow: hidden; max-width: 100%; height: 600px;">
+<div id="heroSlider">
 
-  <!-- Slide 1 -->
-  <div class="heroSlide" style="position: absolute; top: 0; left: 0; width:100%; height:100%; display: flex; align-items:center; justify-content:center; transition: opacity 1s;">
-    <img src="images/serengeti_slideshow.jpg" alt="Serengeti" style="width:100%; height:100%; object-fit:cover; filter: brightness(70%);">
-    <div style="position:absolute; text-align:center; color:white; padding:20px;">
-      <h2 style="font-size:2.5em; margin-bottom:10px;">Explore the Serengeti</h2>
-      <p style="font-size:1.2em; margin-bottom:20px;">3 Days Wildlife Experience</p>
-      <a href="#book" style="background:#fbb03b; color:#0b2239; padding:12px 25px; border-radius:5px; font-size:1em; text-decoration:none;">Book Now</a>
+  <div class="heroSlide active">
+    <img src="images/serengeti_slideshow.jpg" alt="Serengeti">
+    <div class="text-overlay">
+      <h2>Explore the Serengeti</h2>
+      <p>3 Days Wildlife Experience</p>
+      <a href="#book">Book Now</a>
     </div>
   </div>
 
-  <!-- Slide 2 -->
-  <div class="heroSlide" style="position: absolute; top: 0; left: 0; width:100%; height:100%; opacity:0; display: flex; align-items:center; justify-content:center; transition: opacity 1s;">
-    <img src="images/ngorongoro_slideshow.jpg" alt="Ngorongoro" style="width:100%; height:100%; object-fit:cover; filter: brightness(70%);">
-    <div style="position:absolute; text-align:center; color:white; padding:20px;">
-      <h2 style="font-size:2.5em; margin-bottom:10px;">Visit Ngorongoro Crater</h2>
-      <p style="font-size:1.2em; margin-bottom:20px;">Day Trip into the Crater</p>
-      <a href="#book" style="background:#fbb03b; color:#0b2239; padding:12px 25px; border-radius:5px; font-size:1em; text-decoration:none;">Reserve Now</a>
+  <div class="heroSlide">
+    <img src="images/ngorongoro_slideshow.jpg" alt="Ngorongoro">
+    <div class="text-overlay">
+      <h2>Visit Ngorongoro Crater</h2>
+      <p>Day Trip into the Crater</p>
+      <a href="#book">Reserve Now</a>
     </div>
   </div>
 
-  <!-- Slide 3 -->
-  <div class="heroSlide" style="position: absolute; top: 0; left: 0; width:100%; height:100%; opacity:0; display: flex; align-items:center; justify-content:center; transition: opacity 1s;">
-    <img src="images/manyara_slideshow.webp" alt="Manyara" style="width:100%; height:100%; object-fit:cover; filter: brightness(70%);">
-    <div style="position:absolute; text-align:center; color:white; padding:20px;">
-      <h2 style="font-size:2.5em; margin-bottom:10px;">Discover Lake Manyara</h2>
-      <p style="font-size:1.2em; margin-bottom:20px;">Tree-Climbing Lions Adventure</p>
-      <a href="#book" style="background:#fbb03b; color:#0b2239; padding:12px 25px; border-radius:5px; font-size:1em; text-decoration:none;">Explore Now</a>
+  <div class="heroSlide">
+    <img src="images/manyara_slideshow.webp" alt="Manyara">
+    <div class="text-overlay">
+      <h2>Discover Lake Manyara</h2>
+      <p>Tree-Climbing Lions Adventure</p>
+      <a href="#book">Explore Now</a>
     </div>
   </div>
-
 </div>
 
+
   <script>
-  let currentHero = 0;
+  let slideIndex = 0;
   const slides = document.querySelectorAll('.heroSlide');
 
-  function cycleHero() {
-    slides[currentHero].style.opacity = 0;
-    currentHero = (currentHero + 1) % slides.length;
-    slides[currentHero].style.opacity = 1;
+  function showSlide() {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add('active');
   }
 
-  // Start auto slideshow
-  setInterval(cycleHero, 5000);
+  setInterval(showSlide, 6000);
 </script>
 
 
