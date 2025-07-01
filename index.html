@@ -303,7 +303,7 @@
 ‎
 ‎      <!-- Package 1 -->
 ‎      <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-‎        <img src="images/serengeti.jpg" alt="Serengeti Safari" style="width: 100%; height: 220px; object-fit: cover;">
+‎        <img src="images/serengeti_slideshow.jpg" alt="Serengeti Safari" style="width: 100%; height: 220px; object-fit: cover;">
 ‎        <div style="padding: 20px;">
 ‎          <h3 style="color: #0b2239; margin-bottom: 10px;">3 Days Serengeti Safari</h3>
 ‎          <p style="margin: 5px 0; color: #444;">From <strong>$870</strong> per person</p>
@@ -315,7 +315,52 @@
 ‎
 ‎      <!-- Package 2 -->
 ‎      <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-‎        <img src="images/ngorongoro.jpg" alt="Ngorongoro Crater" style="width: 100%; height: 220px; object-fit: cover;">
+‎        <img src="images/ngorongoro_slideshow.jpg" alt="Ngorongoro Crater" style="width: 100%; height: 220px; object-fit: cover;">
+‎        <div style="padding: 20px;">
+‎          <h3 style="color: #0b2239; margin-bottom: 10px;">Ngorongoro Crater Day Trip</h3>
+‎          <p style="margin: 5px 0; color: #444;">From <strong>$320</strong> per person</p>
+‎          <div style="color: #fbb03b; margin: 10px 0;">★★★★★</div>
+‎          <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-right: 10px;">Explore</a>
+‎          <button onclick="openModal('ngorongoro')" style="background: transparent; border: 1px solid #fbb03b; color: #fbb03b; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View Details</button>
+‎        </div>
+‎      </div>
+‎
+‎    </div>
+‎  </div>
+‎</section>
+‎
+‎<!-- Modals -->
+‎<div id="serengeti-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+‎  <div style="background:white; padding:30px; max-width:500px; width:90%; border-radius:10px; position:relative;">
+‎    <h3 style="margin-top:0; color:#0b2239;">3 Days Serengeti Safari</h3>
+‎    <p>This package takes you through the heart of the Serengeti, witnessing the Big Five and the famous wildebeest migration. Includes accommodation, meals, park fees, and a professional guide.</p>
+‎    <button onclick="closeModal('serengeti')" style="margin-top: 20px; background: #fbb03b; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Close</button>
+‎  </div>
+‎</div>
+‎
+‎<div id="ngorongoro-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+‎  <div style="background:white; padding:30px; max-width:500px; width:90%; border-radius:10px; position:relative;">
+‎    <h3 style="margin-top:0; color:#0b2239;">Ngorongoro Crater Day Trip</h3>
+‎    <p>A thrilling full-day safari into the world-famous Ngorongoro Crater. Explore one of Africa’s most stunning wildlife havens, home to lions, rhinos, elephants, and more.</p>
+‎    <button onclick="closeModal('ngorongoro')" style="margin-top: 20px; background: #fbb03b; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Close</button>
+‎  </div>
+‎</div>
+
+  <!-- Package 1 -->
+‎      <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+‎        <img src="images/serengeti_slideshow.jpg" alt="Serengeti Safari" style="width: 100%; height: 220px; object-fit: cover;">
+‎        <div style="padding: 20px;">
+‎          <h3 style="color: #0b2239; margin-bottom: 10px;">3 Days Serengeti Safari</h3>
+‎          <p style="margin: 5px 0; color: #444;">From <strong>$870</strong> per person</p>
+‎          <div style="color: #fbb03b; margin: 10px 0;">★★★★★</div>
+‎          <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-right: 10px;">Explore</a>
+‎          <button onclick="openModal('serengeti')" style="background: transparent; border: 1px solid #fbb03b; color: #fbb03b; padding: 10px 20px; border-radius: 5px; cursor: pointer;">View Details</button>
+‎        </div>
+‎      </div>
+‎
+‎      <!-- Package 2 -->
+‎      <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+‎        <img src="images/ngorongoro_slideshow.jpg" alt="Ngorongoro Crater" style="width: 100%; height: 220px; object-fit: cover;">
 ‎        <div style="padding: 20px;">
 ‎          <h3 style="color: #0b2239; margin-bottom: 10px;">Ngorongoro Crater Day Trip</h3>
 ‎          <p style="margin: 5px 0; color: #444;">From <strong>$320</strong> per person</p>
