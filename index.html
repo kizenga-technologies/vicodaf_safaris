@@ -242,6 +242,60 @@
   firstImg.classList.add('zooming');
 </script>
 
+  <section id="why-choose-us" style="background: url('images/why-bg.jpg') center center / cover no-repeat fixed; padding: 80px 20px;">
+  <div style="max-width: 1100px; margin: auto; text-align: center; background: rgba(255, 255, 255, 0.95); border-radius: 12px; padding: 50px 20px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+    <h2 style="color: #0b2239; font-size: 2.4em; margin-bottom: 40px;">Why Choose Vicodaf Safaris?</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: left;">
+
+      <!-- Box 1 -->
+      <div class="fade-in" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.8s ease; opacity: 0; transform: translateY(40px);" data-delay="0">
+        <div style="font-size: 2em; color: #fbb03b; margin-bottom: 12px;"><i class="fas fa-binoculars"></i></div>
+        <h3 style="color: #0b2239; font-size: 1.3em; margin-bottom: 10px;">Experienced Guides</h3>
+        <p style="color: #333;">Our knowledgeable local guides ensure your safari is exciting and informative.</p>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="fade-in" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.8s ease; opacity: 0; transform: translateY(40px);" data-delay="200">
+        <div style="font-size: 2em; color: #fbb03b; margin-bottom: 12px;"><i class="fas fa-route"></i></div>
+        <h3 style="color: #0b2239; font-size: 1.3em; margin-bottom: 10px;">Customized Itineraries</h3>
+        <p style="color: #333;">Each tour is personalized to your interests and travel plans.</p>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="fade-in" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.8s ease; opacity: 0; transform: translateY(40px);" data-delay="400">
+        <div style="font-size: 2em; color: #fbb03b; margin-bottom: 12px;"><i class="fas fa-dollar-sign"></i></div>
+        <h3 style="color: #0b2239; font-size: 1.3em; margin-bottom: 10px;">Affordable Pricing</h3>
+        <p style="color: #333;">We offer top-tier safari experiences at competitive rates.</p>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="fade-in" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.8s ease; opacity: 0; transform: translateY(40px);" data-delay="600">
+        <div style="font-size: 2em; color: #fbb03b; margin-bottom: 12px;"><i class="fas fa-headset"></i></div>
+        <h3 style="color: #0b2239; font-size: 1.3em; margin-bottom: 10px;">24/7 Support</h3>
+        <p style="color: #333;">We're available anytime to assist you before, during, and after your trip.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const boxes = document.querySelectorAll('.fade-in');
+    boxes.forEach(box => {
+      const rect = box.getBoundingClientRect();
+      const delay = box.getAttribute('data-delay') || 0;
+      if (rect.top < window.innerHeight - 100 && box.style.opacity != 1) {
+        setTimeout(() => {
+          box.style.opacity = 1;
+          box.style.transform = 'translateY(0)';
+        }, delay);
+      }
+    });
+  });
+</script>
+
+
 <section id="packages">
   <h2>Ou Tour Packages</h2>
   <div class="packages">
