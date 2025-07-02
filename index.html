@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vicodaf Safaris</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #fdfcf9; color: #1a1a1a; scroll-behavior: smooth; }
     .navbar { background: #0b2239; position: sticky; top: 0; z-index: 1000; }
@@ -296,13 +297,14 @@
 </script>
 
 <section id="packages" style="background: #fdfcf9; padding: 70px 20px;">
-  <div style="max-width: 1200px; margin: auto;">
+  <div style="max-width: 1100px; margin: auto;">
     <h2 style="text-align: center; font-size: 2.5em; color: #0b2239; margin-bottom: 50px;">Our Safari Packages</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+      
       <!-- Package 1 -->
-      <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.1); transition: transform 0.3s; transition: all 0.8s ease; opacity: 0; transform: translateY(40px);" data-delay="0"" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="images/serengeti_slideshow.jpg" alt="Serengeti Safari" style="width: 100%; height: 220px; object-fit: cover;">
+      <div data-aos="fade-up" data-aos-delay="0" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <img src="images/serengeti_slideshow.jpg" alt="Serengeti Safari" style="width: 100%; height: 200px; object-fit: cover;">
         <div style="padding: 20px;">
           <h3 style="color: #0b2239; margin-bottom: 10px;">3 Days Serengeti Safari</h3>
           <p style="margin: 5px 0; color: #444;">From <strong>$870</strong> per person</p>
@@ -312,8 +314,8 @@
       </div>
 
       <!-- Package 2 -->
-      <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="images/ngorongoro_slideshow.jpg" alt="Ngorongoro" style="width: 100%; height: 220px; object-fit: cover;">
+      <div data-aos="fade-up" data-aos-delay="100" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <img src="images/ngorongoro_slideshow.jpg" alt="Ngorongoro Crater" style="width: 100%; height: 200px; object-fit: cover;">
         <div style="padding: 20px;">
           <h3 style="color: #0b2239; margin-bottom: 10px;">Ngorongoro Crater Day Trip</h3>
           <p style="margin: 5px 0; color: #444;">From <strong>$320</strong> per person</p>
@@ -323,106 +325,103 @@
       </div>
 
       <!-- Package 3 -->
-      <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="images/lakeeyasi.jpg" alt="Lake Eyasi" style="width: 100%; height: 220px; object-fit: cover;">
+      <div data-aos="fade-up" data-aos-delay="200" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        <img src="images/eyasi.jpg" alt="Lake Eyasi" style="width: 100%; height: 200px; object-fit: cover;">
         <div style="padding: 20px;">
           <h3 style="color: #0b2239; margin-bottom: 10px;">Lake Eyasi Cultural Tour</h3>
-          <p style="margin: 5px 0; color: #444;">From <strong>$280</strong> per person</p>
-          <div style="color: #fbb03b; margin: 10px 0;">★★★★☆</div>
-          <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore</a>
-        </div>
-      </div>
-
-      <!-- Package 4 -->
-      <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="images/tarangire.jpg" alt="Tarangire" style="width: 100%; height: 220px; object-fit: cover;">
-        <div style="padding: 20px;">
-          <h3 style="color: #0b2239; margin-bottom: 10px;">Tarangire National Park</h3>
-          <p style="margin: 5px 0; color: #444;">From <strong>$350</strong> per person</p>
-          <div style="color: #fbb03b; margin: 10px 0;">★★★★☆</div>
-          <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore</a>
-        </div>
-      </div>
-
-      <!-- Package 5 -->
-      <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 14px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="images/manyara.jpg" alt="Manyara" style="width: 100%; height: 220px; object-fit: cover;">
-        <div style="padding: 20px;">
-          <h3 style="color: #0b2239; margin-bottom: 10px;">Lake Manyara Safari</h3>
-          <p style="margin: 5px 0; color: #444;">From <strong>$310</strong> per person</p>
+          <p style="margin: 5px 0; color: #444;">From <strong>$460</strong> per person</p>
           <div style="color: #fbb03b; margin: 10px 0;">★★★★★</div>
           <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore</a>
         </div>
       </div>
 
-      <!-- Package 6 -->
-      <div style="background:white; border-radius:12px; overflow:hidden; box-shadow:0 6px 14px rgba(0,0,0,0.1); transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="images/arusha.jpg" alt="Arusha Park" style="width:100%; height:220px; object-fit:cover;">
-        <div style="padding:20px;">
-          <h3 style="color:#0b2239; margin-bottom:10px;">Arusha National Park</h3>
-          <p style="margin:5px 0; color:#444;">From <strong>$220</strong> per person</p>
-          <div style="color:#fbb03b; margin:10px 0;">★★★★☆</div>
-          <a href="#book" style="display:inline-block; background:#fbb03b; color:#0b2239; padding:10px 20px; border-radius:5px; text-decoration:none; font-weight:bold;">Explore</a>
-        </div>
-      </div>
+      <!-- Package 4 -->
+<div data-aos="fade-up" data-aos-delay="300" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+  <img src="images/tarangire.jpg" alt="Tarangire" style="width: 100%; height: 200px; object-fit: cover;">
+  <div style="padding: 20px;">
+    <h3 style="color: #0b2239; margin-bottom: 10px;">Tarangire National Park</h3>
+    <p style="margin: 5px 0; color: #444;">From <strong>$390</strong> per person</p>
+    <div style="color: #fbb03b; margin: 10px 0;">★★★★☆</div>
+    <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore</a>
+  </div>
+</div>
 
-      <!-- Package 7 -->
-      <div style="background:white; border-radius:12px; overflow:hidden; box-shadow:0 6px 14px rgba(0,0,0,0.1); transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="images/zanzibar.jpg" alt="Zanzibar Beach" style="width:100%; height:220px; object-fit:cover;">
-        <div style="padding:20px;">
-          <h3 style="color:#0b2239; margin-bottom:10px;">Zanzibar Beach Holiday</h3>
-          <p style="margin:5px 0; color:#444;">From <strong>$600</strong> per person</p>
-          <div style="color:#fbb03b; margin:10px 0;">★★★★☆</div>
-          <a href="#book" style="display:inline-block; background:#fbb03b; color:#0b2239; padding:10px 20px; border-radius:5px; text-decoration:none; font-weight:bold;">Explore</a>
-        </div>
-      </div>
+<!-- Package 5 -->
+<div data-aos="fade-up" data-aos-delay="400" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+  <img src="images/manyara.jpg" alt="Lake Manyara" style="width: 100%; height: 200px; object-fit: cover;">
+  <div style="padding: 20px;">
+    <h3 style="color: #0b2239; margin-bottom: 10px;">Lake Manyara Safari</h3>
+    <p style="margin: 5px 0; color: #444;">From <strong>$350</strong> per person</p>
+    <div style="color: #fbb03b; margin: 10px 0;">★★★★☆</div>
+    <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore</a>
+  </div>
+</div>
 
-      <!-- Package 8 -->
-      <div style="background:white; border-radius:12px; overflow:hidden; box-shadow:0 6px 14px rgba(0,0,0,0.1); transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="images/mountkilimanjaro.jpg" alt="Kilimanjaro" style="width:100%; height:220px; object-fit:cover;">
-        <div style="padding:20px;">
-          <h3 style="color:#0b2239; margin-bottom:10px;">Kilimanjaro Trekking</h3>
-          <p style="margin:5px 0; color:#444;">From <strong>$1200</strong> per person</p>
-          <div style="color:#fbb03b; margin:10px 0;">★★★★★</div>
-          <a href="#book" style="display:inline-block; background:#fbb03b; color:#0b2239; padding:10px 20px; border-radius:5px; text-decoration:none; font-weight:bold;">Explore</a>
-        </div>
-      </div>
+<!-- Package 6 -->
+<div data-aos="fade-up" data-aos-delay="500" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+  <img src="images/arusha.jpg" alt="Arusha Park" style="width: 100%; height: 200px; object-fit: cover;">
+  <div style="padding: 20px;">
+    <h3 style="color: #0b2239; margin-bottom: 10px;">Arusha National Park</h3>
+    <p style="margin: 5px 0; color: #444;">From <strong>$290</strong> per person</p>
+    <div style="color: #fbb03b; margin: 10px 0;">★★★☆☆</div>
+    <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore</a>
+  </div>
+</div>
 
-      <!-- Package 9 -->
-      <div style="background:white; border-radius:12px; overflow:hidden; box-shadow:0 6px 14px rgba(0,0,0,0.1); transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="images/mikumi.jpg" alt="Mikumi Safari" style="width:100%; height:220px; object-fit:cover;">
-        <div style="padding:20px;">
-          <h3 style="color:#0b2239; margin-bottom:10px;">Mikumi National Park</h3>
-          <p style="margin:5px 0; color:#444;">From <strong>$400</strong> per person</p>
-          <div style="color:#fbb03b; margin:10px 0;">★★★★☆</div>
-          <a href="#book" style="display:inline-block; background:#fbb03b; color:#0b2239; padding:10px 20px; border-radius:5px; text-decoration:none; font-weight:bold;">Explore</a>
-        </div>
-      </div>
+<!-- Package 7 -->
+<div data-aos="fade-up" data-aos-delay="600" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+  <img src="images/zanzibar.jpg" alt="Zanzibar" style="width: 100%; height: 200px; object-fit: cover;">
+  <div style="padding: 20px;">
+    <h3 style="color: #0b2239; margin-bottom: 10px;">Zanzibar Beach Holiday</h3>
+    <p style="margin: 5px 0; color: #444;">From <strong>$650</strong> per person</p>
+    <div style="color: #fbb03b; margin: 10px 0;">★★★★☆</div>
+    <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore</a>
+  </div>
+</div>
 
-      <!-- Package 10 -->
-      <div style="background:white; border-radius:12px; overflow:hidden; box-shadow:0 6px 14px rgba(0,0,0,0.1); transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="images/ruaha.jpg" alt="Ruaha" style="width:100%; height:220px; object-fit:cover;">
-        <div style="padding:20px;">
-          <h3 style="color:#0b2239; margin-bottom:10px;">Ruaha National Park</h3>
-          <p style="margin:5px 0; color:#444;">From <strong>$500</strong> per person</p>
-          <div style="color:#fbb03b; margin:10px 0;">★★★★☆</div>
-          <a href="#book" style="display:inline-block; background:#fbb03b; color:#0b2239; padding:10px 20px; border-radius:5px; text-decoration:none; font-weight:bold;">Explore</a>
-        </div>
-      </div>
+<!-- Package 8 -->
+<div data-aos="fade-up" data-aos-delay="700" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+  <img src="images/mtkilimanjaro.jpg" alt="Mt Kilimanjaro" style="width: 100%; height: 200px; object-fit: cover;">
+  <div style="padding: 20px;">
+    <h3 style="color: #0b2239; margin-bottom: 10px;">Kilimanjaro Climb (Marangu)</h3>
+    <p style="margin: 5px 0; color: #444;">From <strong>$1,200</strong> per person</p>
+    <div style="color: #fbb03b; margin: 10px 0;">★★★★★</div>
+    <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore</a>
+  </div>
+</div>
+
+<!-- Package 9 -->
+<div data-aos="fade-up" data-aos-delay="800" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+  <img src="images/maasai.jpg" alt="Maasai Cultural Tour" style="width: 100%; height: 200px; object-fit: cover;">
+  <div style="padding: 20px;">
+    <h3 style="color: #0b2239; margin-bottom: 10px;">Maasai Cultural Tour</h3>
+    <p style="margin: 5px 0; color: #444;">From <strong>$160</strong> per person</p>
+    <div style="color: #fbb03b; margin: 10px 0;">★★★☆☆</div>
+    <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore</a>
+  </div>
+</div>
+
+<!-- Package 10 -->
+<div data-aos="fade-up" data-aos-delay="900" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s;">
+  <img src="images/bush-meal.jpg" alt="Bush Meal" style="width: 100%; height: 200px; object-fit: cover;">
+  <div style="padding: 20px;">
+    <h3 style="color: #0b2239; margin-bottom: 10px;">Private Bush Dinner Safari</h3>
+    <p style="margin: 5px 0; color: #444;">From <strong>$480</strong> per person</p>
+    <div style="color: #fbb03b; margin: 10px 0;">★★★★☆</div>
+    <a href="#book" style="display: inline-block; background: #fbb03b; color: #0b2239; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Explore</a>
+  </div>
+</div>
+
 
     </div>
   </div>
 </section>
 
-‎
-‎<script>
-‎function openModal(id) {
-‎  document.getElementById(id + '-modal').style.display = 'flex';
-‎}
-‎function closeModal(id) {
-‎  document.getElementById(id + '-modal').style.display = 'none';
-‎}
-‎</script>
+  
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 <section id="about">
   <h2>About Us</h2>
