@@ -5,60 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vicodaf Safaris</title>
   <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/header-nav.css">
+  <link rel="stylesheet" href="css/css.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #fdfcf9; color: #1a1a1a; scroll-behavior: smooth; }
-    .navbar { background: #0b2239; position: sticky; top: 0; z-index: 1000; }
-    .navbar-container { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; max-width: 1200px; margin: auto; }
-    .navbar-logo { color: white; font-size: 20px; font-weight: bold; text-decoration: none; }
-    .navbar-menu { display: flex; list-style: none; gap: 20px; }
-    .navbar-menu li a { color: white; text-decoration: none; font-weight: bold; font-size: 16px; }
-    .navbar-menu li a:hover { color: #fbb03b; }
-    .menu-toggle { display: none; color: white; font-size: 24px; cursor: pointer; }
-    @media (max-width: 768px) {
-      .navbar-menu {
-        display: none;
-        flex-direction: column;
-        background: #0b2239;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 250px;
-        padding: 20px;
-        border-radius: 0 0 0 10px;
-      }
-      .navbar-menu.active { display: flex; }
-      .menu-toggle { display: block; }
-      .menu-close {
-        display: block;
-        color: white;
-        font-size: 24px;
-        align-self: flex-end;
-        margin-bottom: 10px;
-        cursor: pointer;
-      }
-    }
-    
-     @media (max-width: 768px) {
-    header {
-      padding: 25px 10px;
-    }
-
-    header img {
-      width: 70px;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      font-size: 1.6em;
-    }
-
-    header p {
-      font-size: 0.95em;
-    }
-  }
-    
+        
     section { padding: 50px 20px; max-width: 1000px; margin: auto; }
     section h2 { text-align: center; color: #0b2239; margin-bottom: 30px; }
     .packages, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
@@ -160,30 +113,98 @@
   </style>
 </head>
 <body id="home">
-<div class="navbar">
-  <div class="navbar-container">
-    <a href="#home" class="navbar-logo">Vicodaf Safaris</a>
-    <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
-    <ul class="navbar-menu" id="navMenu">
-      <div class="menu-close" onclick="collapseMenu()"><i class="fas fa-times"></i></div>
-      <li><a href="#home" onclick="collapseMenu()">Home</a></li>
-      <li><a href="#packages" onclick="collapseMenu()">Our Tour Packages</a></li>
-      <li><a href="#about" onclick="collapseMenu()">About Us</a></li>
-      <li><a href="#gallery" onclick="collapseMenu()">Gallery</a></li>
-      <li><a href="#book" onclick="collapseMenu()">Book Your Adventure</a></li>
-      <li><a href="#contact" onclick="collapseMenu()">Contact Us</a></li>
-    </ul>
-  </div>
-</div>
+
 <a href="https://wa.me/679515834?text=Hello Vicodaf Safaris. (Message Initiated from Website)" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-<header style="background: #0b2239; text-align: center; padding: 40px 20px; color: white;">
-  <img src="images/vicodaf_logo.png" alt="Vicodaf Logo"
-    style="width: 90px; border-radius: 50%; margin-bottom: 15px;">
-  <h1 style="font-size: 2em; margin-bottom: 8px;">Vicodaf Safaris</h1>
-  <p style="font-size: 1em;">Overhappiness With Us - Explore Tanzania</p>
+<!-- Header with Mobile Toggle Menu -->
+<header>
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="top-left">
+      <span><i class="fas fa-envelope"></i> info@vicodafsafaris.com</span>
+      <span><i class="fab fa-whatsapp"></i> +255 123 456 789</span>
+      <span><i class="fas fa-map-marker-alt"></i> Arusha, Tanzania</span>
+    </div>
+    <div class="top-right">
+      <button class="lang-btn"><img src="flags/us.png" alt="English"></button>
+      <button class="lang-btn"><img src="flags/fr.png" alt="French"></button>
+      <button class="lang-btn"><img src="flags/de.png" alt="German"></button>
+      <button class="lang-btn"><img src="flags/es.png" alt="Spanish"></button>
+      <button class="lang-btn"><img src="flags/it.png" alt="Italian"></button>
+      <button class="lang-btn"><img src="flags/cn.png" alt="Chinese"></button>
+      <button class="lang-btn"><img src="flags/jp.png" alt="Japanese"></button>
+      <button class="lang-btn"><img src="flags/ru.png" alt="Russian"></button>
+    </div>
+  </div>
+
+  <!-- Logo + Nav -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="images/logo.png" alt="Vicodaf Safaris Logo">
+    </div>
+    <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">About Us</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Our Safari Vehicles</a></li>
+          <li><a href="#">Payment Policy</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Safaris</a></li>
+      <li class="dropdown">
+        <a href="#">Destinations</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Serengeti</a></li>
+          <li><a href="#">Ngorongoro</a></li>
+          <li><a href="#">Tarangire</a></li>
+          <li><a href="#">Lake Manyara</a></li>
+          <li><a href="#">Arusha</a></li>
+          <li><a href="#">Ruaha</a></li>
+          <li><a href="#">Mikumi</a></li>
+          <li><a href="#">Zanzibar</a></li>
+          <li><a href="#">Mount Kilimanjaro</a></li>
+          <li><a href="#">Lake Eyasi</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Climbing</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Kilimanjaro Routes</a></li>
+          <li><a href="#">Meru Climb</a></li>
+          <li><a href="#">Mount Ol Doinyo Lengai</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Experiences</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Cultural Tours</a></li>
+          <li><a href="#">Hot Air Balloon</a></li>
+          <li><a href="#">Luxury Safari</a></li>
+          <li><a href="#">Family Safari</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Day Trips</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Arusha National Park</a></li>
+          <li><a href="#">Ngorongoro Day</a></li>
+          <li><a href="#">Lake Duluti</a></li>
+          <li><a href="#">Chemka Hot Springs</a></li>
+          <li><a href="#">Materuni Waterfalls</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
+<script src="javascript/nav-header.js" defer></script>
+  
 <div id="heroSlider">
 
   <div class="heroSlide active">
