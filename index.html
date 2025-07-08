@@ -191,99 +191,90 @@
   <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
     <!-- Left Info -->
     <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
-      <span><i class="fas fa-envelope" style="margin-right:5px; color:#555;"></i> info@vicodafsafaris.com | bookings@vicodafsafaris.com</span>
-      <span><i class="fab fa-whatsapp" style="margin-right:5px; color:#25D366;"></i> +255 712 345 678</span>
-      <span><i class="fas fa-map-marker-alt" style="margin-right:5px; color:#fbb03b;"></i> Arusha, Tanzania</span>
+      <span><img src="icons/email.svg" style="height:14px; vertical-align:middle; margin-right:5px;"> info@vicodafsafaris.com | bookings@vicodafsafaris.com</span>
+      <span><img src="icons/whatsapp.svg" style="height:14px; vertical-align:middle; margin-right:5px;"> +255 712 345 678</span>
+      <span><img src="icons/location.svg" style="height:14px; vertical-align:middle; margin-right:5px;"> Arusha, Tanzania</span>
     </div>
     <!-- Right Languages -->
-    <div id="language-switcher" style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-      <button class="lang-btn" data-lang="en"><img src="https://flagcdn.com/w40/us.png" style="height:16px;"> EN</button>
-      <button class="lang-btn" data-lang="de"><img src="https://flagcdn.com/w40/de.png" style="height:16px;"> DE</button>
-      <button class="lang-btn" data-lang="fr"><img src="https://flagcdn.com/w40/fr.png" style="height:16px;"> FR</button>
-      <button class="lang-btn" data-lang="it"><img src="https://flagcdn.com/w40/it.png" style="height:16px;"> IT</button>
-      <button class="lang-btn" data-lang="es"><img src="https://flagcdn.com/w40/es.png" style="height:16px;"> ES</button>
-      <button class="lang-btn" data-lang="cn"><img src="https://flagcdn.com/w40/cn.png" style="height:16px;"> CN</button>
-      <button class="lang-btn" data-lang="jp"><img src="https://flagcdn.com/w40/jp.png" style="height:16px;"> JP</button>
-      <button class="lang-btn" data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" style="height:16px;"> RU</button>
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <button onclick="changeLang('en')" style="border:none; background:none; cursor:pointer;"><img src="flags/us.png" style="height:16px;"> EN</button>
+      <button onclick="changeLang('de')" style="border:none; background:none; cursor:pointer;"><img src="flags/de.png" style="height:16px;"> DE</button>
+      <button onclick="changeLang('fr')" style="border:none; background:none; cursor:pointer;"><img src="flags/fr.png" style="height:16px;"> FR</button>
+      <button onclick="changeLang('it')" style="border:none; background:none; cursor:pointer;"><img src="flags/it.png" style="height:16px;"> IT</button>
+      <button onclick="changeLang('es')" style="border:none; background:none; cursor:pointer;"><img src="flags/es.png" style="height:16px;"> ES</button>
+      <button onclick="changeLang('cn')" style="border:none; background:none; cursor:pointer;"><img src="flags/cn.png" style="height:16px;"> CN</button>
+      <button onclick="changeLang('jp')" style="border:none; background:none; cursor:pointer;"><img src="flags/jp.png" style="height:16px;"> JP</button>
+      <button onclick="changeLang('ru')" style="border:none; background:none; cursor:pointer;"><img src="flags/ru.png" style="height:16px;"> RU</button>
     </div>
   </div>
 </div>
 
-<!-- Navigation -->
-<header style="background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); position:sticky; top:0; z-index:999;">
-  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:15px 20px; flex-wrap:wrap;">
-    <a href="index.html"><img src="images/logo.png" style="height:50px;"></a>
-    <div onclick="toggleMenu()" style="display:none; font-size:24px; cursor:pointer;" id="burger">&#9776;</div>
-    <nav id="mainNav" style="display:flex; flex-wrap:wrap;">
-      <ul style="list-style:none; display:flex; flex-direction:row; flex-wrap:wrap; margin:0; padding:0; align-items:center; gap:20px;" id="menuList">
+<!-- Navigation Bar -->
+<header style="background:white; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:15px 20px; flex-wrap:wrap; position:relative;">
+    <a href="index.html"><img src="images/logo.png" alt="Vicodaf Safaris" style="height:50px;"></a>
 
-        <li><a href="index.html">Home</a></li>
+    <!-- Hamburger Icon -->
+    <div id="hamburger" onclick="toggleMenu()" style="display:none; cursor:pointer;">
+      <div style="width:25px; height:3px; background:#0b2239; margin:5px 0;"></div>
+      <div style="width:25px; height:3px; background:#0b2239; margin:5px 0;"></div>
+      <div style="width:25px; height:3px; background:#0b2239; margin:5px 0;"></div>
+    </div>
 
-        <li class="has-submenu">
-          <a href="#">About Us</a>
-          <ul class="submenu">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="vehicles.html">Our Safari Vehicles</a></li>
-            <li><a href="payment-policy.html">Payment Policy</a></li>
-          </ul>
-        </li>
-
-        <li><a href="safaris.html">Safaris</a></li>
-
-        <li class="has-submenu">
-          <a href="#">Destinations</a>
-          <ul class="submenu">
-            <li><a href="#">Serengeti</a></li>
-            <li><a href="#">Ngorongoro</a></li>
-            <li><a href="#">Tarangire</a></li>
-            <li><a href="#">Lake Manyara</a></li>
-            <li><a href="#">Arusha NP</a></li>
-            <li><a href="#">Ruaha</a></li>
-            <li><a href="#">Selous</a></li>
-            <li><a href="#">Mikumi</a></li>
-            <li><a href="#">Zanzibar</a></li>
-            <li><a href="#">Mt. Kilimanjaro</a></li>
-          </ul>
-        </li>
-
-        <li class="has-submenu">
-          <a href="#">Climbing</a>
-          <ul class="submenu">
-            <li><a href="#">Mount Kilimanjaro</a></li>
-            <li><a href="#">Mount Meru</a></li>
-            <li><a href="#">Ol Doinyo Lengai</a></li>
-          </ul>
-        </li>
-
-        <li class="has-submenu">
-          <a href="#">Experiences</a>
-          <ul class="submenu">
-            <li><a href="#">Hot Air Balloon</a></li>
-            <li><a href="#">Cultural Tours</a></li>
-            <li><a href="#">Bird Watching</a></li>
-            <li><a href="#">Walking Safaris</a></li>
-            <li><a href="#">Honeymoon Safari</a></li>
-          </ul>
-        </li>
-
-        <li class="has-submenu">
-          <a href="#">Day Trips</a>
-          <ul class="submenu">
-            <li><a href="#">Arusha Park</a></li>
-            <li><a href="#">Lake Duluti</a></li>
-            <li><a href="#">Materuni Waterfalls</a></li>
-            <li><a href="#">Chemka Hot Springs</a></li>
-            <li><a href="#">Kikuletwa</a></li>
-          </ul>
-        </li>
-
-        <li><a href="contact.html">Contact</a></li>
-
+    <nav id="mainNav" style="flex-grow:1;">
+      <ul style="display:flex; flex-wrap:wrap; gap:25px; list-style:none; margin:0; padding:0; align-items:center; font-size:15px; justify-content:flex-end;">
+        <li><a href="index.html" style="text-decoration:none; color:#0b2239;">Home</a></li>
+        <li class="dropdown"><a href="#" style="text-decoration:none; color:#0b2239;">About Us</a></li>
+        <li><a href="safaris.html" style="text-decoration:none; color:#0b2239;">Safaris</a></li>
+        <li class="dropdown"><a href="#" style="text-decoration:none; color:#0b2239;">Destinations</a></li>
+        <li class="dropdown"><a href="#" style="text-decoration:none; color:#0b2239;">Climbing</a></li>
+        <li class="dropdown"><a href="#" style="text-decoration:none; color:#0b2239;">Experiences</a></li>
+        <li class="dropdown"><a href="#" style="text-decoration:none; color:#0b2239;">Day Trips</a></li>
+        <li><a href="contact.html" style="text-decoration:none; color:#0b2239;">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
+
+<script>
+function changeLang(lang) {
+  alert("Language changed to: " + lang + " (not implemented)");
+}
+
+function toggleMenu() {
+  const nav = document.getElementById("mainNav");
+  if (nav.style.display === "flex") {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "flex";
+    nav.style.flexDirection = "column";
+    nav.style.background = "#fff";
+    nav.style.position = "absolute";
+    nav.style.top = "80px";
+    nav.style.left = "0";
+    nav.style.width = "100%";
+    nav.style.padding = "15px 20px";
+    nav.style.boxShadow = "0 8px 16px rgba(0,0,0,0.1)";
+  }
+}
+
+window.addEventListener("resize", function() {
+  if (window.innerWidth > 768) {
+    document.getElementById("mainNav").style.display = "flex";
+    document.getElementById("mainNav").style.flexDirection = "row";
+    document.getElementById("mainNav").style.position = "static";
+    document.getElementById("mainNav").style.boxShadow = "none";
+  } else {
+    document.getElementById("mainNav").style.display = "none";
+  }
+});
+
+// Initial check
+if (window.innerWidth <= 768) {
+  document.getElementById("mainNav").style.display = "none";
+  document.getElementById("hamburger").style.display = "block";
+}
+</script>
   
 <div id="heroSlider">
 
