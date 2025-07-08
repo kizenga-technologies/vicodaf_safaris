@@ -209,26 +209,31 @@
   </div>
 </div>
 
-<!-- Navigation Bar -->
-<header style="background:white; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:15px 20px;">
-    <a href="index.html"><img src="images/logo.png" alt="Vicodaf Safaris" style="height:50px;"></a>
-    <nav>
-      <ul style="display:flex; gap:25px; list-style:none; margin:0; padding:0; align-items:center; font-size:15px;">
+<!-- Navigation -->
+<header style="background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); position:sticky; top:0; z-index:999;">
+  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:15px 20px; flex-wrap:wrap;">
+    <a href="index.html"><img src="images/logo.png" style="height:50px;"></a>
+    <div onclick="toggleMenu()" style="display:none; font-size:24px; cursor:pointer;" id="burger">&#9776;</div>
+    <nav id="mainNav" style="display:flex; flex-wrap:wrap;">
+      <ul style="list-style:none; display:flex; flex-direction:row; flex-wrap:wrap; margin:0; padding:0; align-items:center; gap:20px;" id="menuList">
+
         <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
+
+        <li class="has-submenu">
           <a href="#">About Us</a>
-          <ul class="dropdown-content">
+          <ul class="submenu">
             <li><a href="about.html">About Us</a></li>
             <li><a href="team.html">Our Team</a></li>
             <li><a href="vehicles.html">Our Safari Vehicles</a></li>
             <li><a href="payment-policy.html">Payment Policy</a></li>
           </ul>
         </li>
+
         <li><a href="safaris.html">Safaris</a></li>
-        <li class="dropdown">
+
+        <li class="has-submenu">
           <a href="#">Destinations</a>
-          <ul class="dropdown-content">
+          <ul class="submenu">
             <li><a href="#">Serengeti</a></li>
             <li><a href="#">Ngorongoro</a></li>
             <li><a href="#">Tarangire</a></li>
@@ -238,20 +243,22 @@
             <li><a href="#">Selous</a></li>
             <li><a href="#">Mikumi</a></li>
             <li><a href="#">Zanzibar</a></li>
-            <li><a href="#">Mount Kilimanjaro</a></li>
+            <li><a href="#">Mt. Kilimanjaro</a></li>
           </ul>
         </li>
-        <li class="dropdown">
+
+        <li class="has-submenu">
           <a href="#">Climbing</a>
-          <ul class="dropdown-content">
+          <ul class="submenu">
             <li><a href="#">Mount Kilimanjaro</a></li>
             <li><a href="#">Mount Meru</a></li>
             <li><a href="#">Ol Doinyo Lengai</a></li>
           </ul>
         </li>
-        <li class="dropdown">
+
+        <li class="has-submenu">
           <a href="#">Experiences</a>
-          <ul class="dropdown-content">
+          <ul class="submenu">
             <li><a href="#">Hot Air Balloon</a></li>
             <li><a href="#">Cultural Tours</a></li>
             <li><a href="#">Bird Watching</a></li>
@@ -259,9 +266,10 @@
             <li><a href="#">Honeymoon Safari</a></li>
           </ul>
         </li>
-        <li class="dropdown">
+
+        <li class="has-submenu">
           <a href="#">Day Trips</a>
-          <ul class="dropdown-content">
+          <ul class="submenu">
             <li><a href="#">Arusha Park</a></li>
             <li><a href="#">Lake Duluti</a></li>
             <li><a href="#">Materuni Waterfalls</a></li>
@@ -269,7 +277,9 @@
             <li><a href="#">Kikuletwa</a></li>
           </ul>
         </li>
+
         <li><a href="contact.html">Contact</a></li>
+
       </ul>
     </nav>
   </div>
