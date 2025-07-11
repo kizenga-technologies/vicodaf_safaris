@@ -1,209 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Vicodaf Safaris</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/header-nav.css">
-  <link rel="stylesheet" href="css/css.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Vicodaf Safaris</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body { margin: 0; font-family: 'Segoe UI', sans-serif; color: #333; line-height: 1.6; }
-    .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; padding: 15px; font-size: 24px;    z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-    .whatsapp-btn:hover { background-color: #128c7e; }
-    header { background: url('images/about-banner.jpg') center/cover no-repeat; height: 300px; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); text-align: center; }
-    header h1 { font-size: 3em; }
-    header nav ul li {
-    position: relative;
-  }
-
-  header nav ul li a {
-    text-decoration: none;
-    color: #0b2239;
-    font-weight: 500;
-  }
-
-  .submenu {
-    display: none;
-    position: absolute;
-    background: #fff;
-    top: 100%;
-    left: 0;
-    min-width: 180px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    z-index: 9999;
-    padding: 10px 0;
-  }
-
-  .submenu li {
-    padding: 5px 15px;
-  }
-
-  .submenu li a {
-    color: #0b2239;
-    text-decoration: none;
-  }
-
-  /* Hover dropdowns (desktop) */
-  .has-submenu:hover .submenu {
-    display: block;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    #burger {
-      display: block !important;
+    /* Header/Nav */
+    .top-bar { background: #f4f4f4; padding: 8px 20px; font-size: 0.9em; display: flex; justify-content: space-between; }
+    .top-bar .contact-info span { margin-right: 15px; }
+    nav.main-nav { background: #0b2239; padding: 15px 20px; display: flex; align-items: center; }
+    nav.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; }
+    nav.main-nav a { color: white; text-decoration: none; }
+    nav.main-nav .menu-toggle { display: none; color: white; font-size: 1.2em; cursor: pointer; }
+    /* Existing banner, sections, footer tweaks */
+    footer { background: #0b2239; color: #fff; padding: 30px 20px; text-align: center; }
+    footer .footer-links a { color: #fbb03b; margin: 0 10px; text-decoration: none; font-size: 0.9em; }
+    footer small { display: block; margin-top: 10px; font-size: 0.8em; color: #ccc; }
+    @media (max-width: 768px) {
+      nav.main-nav ul { display: none; flex-direction: column; background: #0b2239; position: absolute; top: 55px; left: 0; right: 0; }
+      nav.main-nav .menu-toggle { display: block; }
     }
-
-    #mainNav {
-      width: 100%;
-      display: none;
-    }
-
-    #menuList {
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .submenu {
-      position: static;
-      box-shadow: none;
-      padding-left: 15px;
-    }
-
-    .has-submenu > a::after {
-      content: " ▼";
-      font-size: 0.7em;
-    }
-
-    .has-submenu.open .submenu {
-      display: block;
-    }
-  }
-    .section { max-width: 1200px; margin: auto; padding: 60px 20px; }
-    .section h2 { font-size: 2.5em; color: #0b2239; margin-bottom: 20px; text-align: center; }
-    .section p { font-size: 1.1em; }
-    .two-columns { display: flex; flex-wrap: wrap; gap: 40px; }
-    .two-columns > div { flex: 1; min-width: 280px; }
-    .highlight-box { background: #fdfcf9; padding: 30px; border-left: 5px solid #fbb03b; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-    .values { display: flex; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
-    .value-box { flex: 1; min-width: 250px; background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
-    .value-box h3 { color: #0b2239; margin-bottom: 10px; }
-    .value-box i { color: #fbb03b; font-size: 2em; margin-bottom: 10px; display: inline-block; }
-     footer { background-color: #0b2239; color: white; padding: 40px 20px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-    .footer-grid h4 { color: #fbb03b; margin-bottom: 10px; }
-    
   </style>
 </head>
 <body>
 
-  <a href="https://wa.me/679515834?text=Hello Vicodaf Safaris. (Message Initiated from Website)" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
-  <!-- Header Top -->
-<div style="background:#f4f4f4; padding:10px 20px; font-size:14px; border-bottom:1px solid #ccc;">
-  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center;">
-    <!-- Left -->
-    <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
-      <span><img src="icons/email.svg" style="height:14px; margin-right:5px;"> info@vicodafsafaris.com | bookings@vicodafsafaris.com</span>
-      <span><img src="icons/whatsapp.svg" style="height:14px; margin-right:5px;"> +255 712 345 678</span>
-      <span><img src="icons/location.svg" style="height:14px; margin-right:5px;"> Arusha, Tanzania</span>
+  <!-- Actual Top Bar -->
+  <div class="top-bar">
+    <div class="contact-info">
+      <span><i class="fa fa-envelope"></i> info@vicodafsafaris.com</span>
+      <span><i class="fa fa-phone"></i> +255 712 345 678</span>
+      <span><i class="fa fa-map-marker-alt"></i> Arusha, Tanzania</span>
     </div>
-    <!-- Right -->
-    <div style="display:flex; gap:10px; align-items:center; margin-top:5px;">
-      <button style="background:none; border:none;"><img src="flags/us.png" style="height:16px;"> EN</button>
-      <button style="background:none; border:none;"><img src="flags/de.png" style="height:16px;"> DE</button>
-      <button style="background:none; border:none;"><img src="flags/fr.png" style="height:16px;"> FR</button>
-      <button style="background:none; border:none;"><img src="flags/it.png" style="height:16px;"> IT</button>
-      <button style="background:none; border:none;"><img src="flags/es.png" style="height:16px;"> ES</button>
-      <button style="background:none; border:none;"><img src="flags/cn.png" style="height:16px;"> CN</button>
-      <button style="background:none; border:none;"><img src="flags/jp.png" style="height:16px;"> JP</button>
-      <button style="background:none; border:none;"><img src="flags/ru.png" style="height:16px;"> RU</button>
+    <div class="lang-switch">
+      EN | DE | FR | IT | ES | CN | JP | RU
     </div>
   </div>
-</div>
 
-<!-- Navigation -->
-<header style="background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); position:sticky; top:0; z-index:999;">
-  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:15px 20px; flex-wrap:wrap;">
-    <a href="index.html"><img src="images/vicodaf_logo.png" style="height:50px; border-radius: 50%;"></a>
-    <div onclick="toggleMenu()" style="display:none; font-size:24px; cursor:pointer;" id="burger">&#9776;</div>
-    <nav id="mainNav" style="display:flex; flex-wrap:wrap;">
-      <ul style="list-style:none; display:flex; flex-direction:row; flex-wrap:wrap; margin:0; padding:0; align-items:center; gap:20px;" id="menuList">
+  <!-- Actual Main Navigation -->
+  <nav class="main-nav">
+    <i class="fa fa-bars menu-toggle"></i>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/vehicles">Our Safari Vehicles</a></li>
+      <li><a href="/safaris">Safaris</a></li>
+      <li><a href="/destinations">Destinations</a></li>
+      <li><a href="/climbing">Climbing</a></li>
+      <li><a href="/experiences">Experiences</a></li>
+      <li><a href="/day-trips">Day Trips</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
 
-        <li><a href="index.html">Home</a></li>
-
-        <li class="has-submenu">
-          <a href="#">About Us</a>
-          <ul class="submenu">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="vehicles.html">Our Safari Vehicles</a></li>
-          </ul>
-        </li>
-
-        <li><a href="safaris.html">Safaris</a></li>
-
-        <li class="has-submenu">
-          <a href="#">Destinations</a>
-          <ul class="submenu">
-            <li><a href="#">Serengeti</a></li>
-            <li><a href="#">Ngorongoro</a></li>
-            <li><a href="#">Tarangire</a></li>
-            <li><a href="#">Lake Manyara</a></li>
-            <li><a href="#">Arusha NP</a></li>
-            <li><a href="#">Ruaha</a></li>
-            <li><a href="#">Selous</a></li>
-            <li><a href="#">Mikumi</a></li>
-            <li><a href="#">Zanzibar</a></li>
-            <li><a href="#">Mt. Kilimanjaro</a></li>
-          </ul>
-        </li>
-
-        <li class="has-submenu">
-          <a href="#">Climbing</a>
-          <ul class="submenu">
-            <li><a href="#">Mount Kilimanjaro</a></li>
-            <li><a href="#">Mount Meru</a></li>
-            <li><a href="#">Ol Doinyo Lengai</a></li>
-          </ul>
-        </li>
-
-        <li class="has-submenu">
-          <a href="#">Experiences</a>
-          <ul class="submenu">
-            <li><a href="#">Hot Air Balloon</a></li>
-            <li><a href="#">Cultural Tours</a></li>
-            <li><a href="#">Bird Watching</a></li>
-            <li><a href="#">Walking Safaris</a></li>
-            <li><a href="#">Honeymoon Safari</a></li>
-          </ul>
-        </li>
-
-        <li class="has-submenu">
-          <a href="#">Day Trips</a>
-          <ul class="submenu">
-            <li><a href="#">Arusha Park</a></li>
-            <li><a href="#">Lake Duluti</a></li>
-            <li><a href="#">Materuni Waterfalls</a></li>
-            <li><a href="#">Chemka Hot Springs</a></li>
-            <li><a href="#">Kikuletwa</a></li>
-          </ul>
-        </li>
-
-        <li><a href="contact.html">Contact</a></li>
-
-      </ul>
-    </nav>
-  </div>
-</header>
-  
   <!-- Banner Section -->
-  <header>
+  <header style="background: url('images/about-banner.jpg') center/cover no-repeat; height: 300px; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); text-align: center;">
     <h1>About Vicodaf Safaris</h1>
   </header>
 
-  <!-- Introduction Section -->
+  <!-- Content Sections (unchanged) -->
   <section class="section">
     <div class="two-columns">
       <div>
@@ -211,12 +67,13 @@
         <p>Vicodaf Safaris is a locally owned and operated tour company based in Arusha, Tanzania. Our mission is to deliver life-changing safari experiences by combining local expertise with international standards. From the majestic plains of the Serengeti to the peaks of Mount Kilimanjaro, we curate immersive and unforgettable journeys for every traveler.</p>
       </div>
       <div>
-        <img src="images/about-us.avif" alt="Vicodaf Team" style="width:100%; border-radius:10px;">
+        <img src="images/about-us.jpg" alt="Vicodaf Team" style="width:100%; border-radius:10px;">
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us Section -->
+  <!-- ... rest of your sections unchanged ... -->
+   <!-- Why Choose Us Section -->
   <section class="section" style="background:#fdfcf9;">
     <h2>Why Choose Vicodaf Safaris</h2>
     <div class="values">
@@ -257,27 +114,27 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (from GitHub template) -->
   <footer>
-  <div class="footer-grid">
-    <div><h4>Contact</h4><p>Phone: +255 679 515 834</p><p>Email: info@vicodafsafaris.co.tz</p></div>
-    <div><h4>Working Hours</h4><p>Mon - Fri: 8:00 AM - 6:00 PM</p><p>Sat: 9:00 AM - 2:00 PM</p><p>Sun: Closed</p></div>
-    <div><h4>Social Media</h4>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=61577646479957"><i class="fab fa-facebook"></i></a>
-        <a href=""><i class="fab fa-instagram"></i></a>
-        <a href=""><i class="fab fa-twitter"></i></a>
-        <a href=""><i class="fab fa-youtube"></i></a>
-        <a href=""><i class="fab fa-linkedin"></i></a>
-        <a href="https://wa.me/679515834?text=Hello Vicodaf Safaris. (Message Initiated from Website)"><i class="fab fa-whatsapp"></i></a>
-      </div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/tours">Tours</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms &amp; Conditions</a>
     </div>
-    <div><h4></h4><p><strong></strong></p><p><a href="#" style="color:#fbb03b;"></a></p></div>
-  </div>
-  <div class="developer">
-    <p>&copy; 2025 Vicodaf Safaris. All rights reserved.</p>
-  </div>
-</footer>
+    <p>Designed by Kizenga Technologies</p>
+    <small>&copy; 2025 Vicodaf Safaris. All rights reserved.</small>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      const menu = document.querySelector('nav.main-nav ul');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
 
 </body>
 </html>
