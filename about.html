@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Vicodaf Safaris</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body { margin: 0; font-family: 'Segoe UI', sans-serif; color: #333; line-height: 1.6; }
     header { background: url('images/about-banner.jpg') center/cover no-repeat; height: 300px; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); text-align: center; }
@@ -24,6 +25,10 @@
       header h1 { font-size: 2em; }
       .two-columns { flex-direction: column; }
     }
+
+            footer { background-color: #0b2239; color: white; padding: 40px 20px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .footer-grid h4 { color: #fbb03b; margin-bottom: 10px; }
   </style>
 </head>
 <body>
@@ -89,8 +94,25 @@
 
   <!-- Footer -->
   <footer>
+  <div class="footer-grid">
+    <div><h4>Contact</h4><p>Phone: +255 679 515 834</p><p>Email: info@vicodafsafaris.co.tz</p></div>
+    <div><h4>Working Hours</h4><p>Mon - Fri: 8:00 AM - 6:00 PM</p><p>Sat: 9:00 AM - 2:00 PM</p><p>Sun: Closed</p></div>
+    <div><h4>Social Media</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61577646479957"><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-youtube"></i></a>
+        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/679515834?text=Hello Vicodaf Safaris. (Message Initiated from Website)"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div><h4></h4><p><strong></strong></p><p><a href="#" style="color:#fbb03b;"></a></p></div>
+  </div>
+  <div class="developer">
     <p>&copy; 2025 Vicodaf Safaris. All rights reserved.</p>
-  </footer>
+  </div>
+</footer>
 
 </body>
 </html>
