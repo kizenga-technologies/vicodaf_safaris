@@ -194,80 +194,150 @@
 
   <!-- Navigation Bar -->
 
-  <!-- Navigation Bar with Hamburger -->
-<header style="background:white; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+  <!-- Vicodaf Safaris Navigation with Hover Dropdown and Mobile Menu -->
+<header style="background:#fff; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
   <div style="max-width:1200px; margin:auto; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;">
     <!-- Logo -->
     <a href="index.html"><img src="images/logo.png" alt="Vicodaf Safaris" style="height:50px;"></a>
 
-    <!-- Hamburger Button (Mobile) -->
+    <!-- Hamburger Button -->
     <button onclick="toggleMenu()" style="background:none; border:none; font-size:24px; cursor:pointer; display:none;" id="hamburger">
       <i class="fas fa-bars"></i>
     </button>
 
-    <!-- Navigation Links -->
+    <!-- Navigation Menu -->
     <nav id="mainNav" style="flex-grow:1;">
-      <ul style="display:flex; flex-wrap:wrap; gap:25px; list-style:none; margin:0; padding:0; justify-content:flex-end;" id="navLinks">
-        <li><a href="index.html">Home</a></li>
+      <ul id="navLinks" style="display:flex; flex-wrap:wrap; gap:25px; list-style:none; margin:0; padding:0; justify-content:flex-end;">
+        <li style="position:relative;"><a href="index.html">Home</a></li>
+
         <li style="position:relative;">
           <a href="#">About Us</a>
-          <ul style="display:none; position:absolute; top:30px; left:0; background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:10px 0; min-width:180px;">
-            <li style="padding:8px 20px;"><a href="about.html">About Us</a></li>
-            <li style="padding:8px 20px;"><a href="team.html">Our Team</a></li>
-            <li style="padding:8px 20px;"><a href="vehicles.html">Our Safari Vehicles</a></li>
-            <li style="padding:8px 20px;"><a href="payment-policy.html">Payment Policy</a></li>
+          <ul style="display:none; position:absolute; top:100%; left:0; background:white; list-style:none; padding:10px; margin:0; box-shadow:0 6px 12px rgba(0,0,0,0.1);">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="vehicles.html">Our Safari Vehicles</a></li>
+            <li><a href="payment-policy.html">Payment Policy</a></li>
           </ul>
         </li>
+
         <li><a href="safaris.html">Safaris</a></li>
+
         <li style="position:relative;">
           <a href="#">Destinations</a>
-          <ul style="display:none; position:absolute; top:30px; left:0; background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:10px 0; min-width:180px;">
-            <li style="padding:8px 20px;"><a href="#">Serengeti</a></li>
-            <li style="padding:8px 20px;"><a href="#">Ngorongoro</a></li>
-            <li style="padding:8px 20px;"><a href="#">Tarangire</a></li>
-            <li style="padding:8px 20px;"><a href="#">Lake Manyara</a></li>
-            <li style="padding:8px 20px;"><a href="#">Arusha NP</a></li>
-            <li style="padding:8px 20px;"><a href="#">Ruaha</a></li>
-            <li style="padding:8px 20px;"><a href="#">Selous</a></li>
-            <li style="padding:8px 20px;"><a href="#">Mikumi</a></li>
-            <li style="padding:8px 20px;"><a href="#">Zanzibar</a></li>
-            <li style="padding:8px 20px;"><a href="#">Mount Kilimanjaro</a></li>
+          <ul style="display:none; position:absolute; top:100%; left:0; background:white; list-style:none; padding:10px; margin:0; box-shadow:0 6px 12px rgba(0,0,0,0.1);">
+            <li><a href="#">Serengeti</a></li>
+            <li><a href="#">Ngorongoro</a></li>
+            <li><a href="#">Tarangire</a></li>
+            <li><a href="#">Lake Manyara</a></li>
+            <li><a href="#">Arusha NP</a></li>
+            <li><a href="#">Ruaha</a></li>
+            <li><a href="#">Selous</a></li>
+            <li><a href="#">Mikumi</a></li>
+            <li><a href="#">Zanzibar</a></li>
+            <li><a href="#">Mount Kilimanjaro</a></li>
           </ul>
         </li>
+
         <li style="position:relative;">
           <a href="#">Climbing</a>
-          <ul style="display:none; position:absolute; top:30px; left:0; background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:10px 0; min-width:180px;">
-            <li style="padding:8px 20px;"><a href="#">Mount Kilimanjaro</a></li>
-            <li style="padding:8px 20px;"><a href="#">Mount Meru</a></li>
-            <li style="padding:8px 20px;"><a href="#">Ol Doinyo Lengai</a></li>
+          <ul style="display:none; position:absolute; top:100%; left:0; background:white; list-style:none; padding:10px; margin:0; box-shadow:0 6px 12px rgba(0,0,0,0.1);">
+            <li><a href="#">Mount Kilimanjaro</a></li>
+            <li><a href="#">Mount Meru</a></li>
+            <li><a href="#">Ol Doinyo Lengai</a></li>
           </ul>
         </li>
+
         <li style="position:relative;">
           <a href="#">Experiences</a>
-          <ul style="display:none; position:absolute; top:30px; left:0; background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:10px 0; min-width:180px;">
-            <li style="padding:8px 20px;"><a href="#">Hot Air Balloon</a></li>
-            <li style="padding:8px 20px;"><a href="#">Cultural Tours</a></li>
-            <li style="padding:8px 20px;"><a href="#">Bird Watching</a></li>
-            <li style="padding:8px 20px;"><a href="#">Walking Safaris</a></li>
-            <li style="padding:8px 20px;"><a href="#">Honeymoon Safari</a></li>
+          <ul style="display:none; position:absolute; top:100%; left:0; background:white; list-style:none; padding:10px; margin:0; box-shadow:0 6px 12px rgba(0,0,0,0.1);">
+            <li><a href="#">Hot Air Balloon</a></li>
+            <li><a href="#">Cultural Tours</a></li>
+            <li><a href="#">Bird Watching</a></li>
+            <li><a href="#">Walking Safaris</a></li>
+            <li><a href="#">Honeymoon Safari</a></li>
           </ul>
         </li>
+
         <li style="position:relative;">
           <a href="#">Day Trips</a>
-          <ul style="display:none; position:absolute; top:30px; left:0; background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:10px 0; min-width:180px;">
-            <li style="padding:8px 20px;"><a href="#">Arusha Park</a></li>
-            <li style="padding:8px 20px;"><a href="#">Lake Duluti</a></li>
-            <li style="padding:8px 20px;"><a href="#">Materuni Waterfalls</a></li>
-            <li style="padding:8px 20px;"><a href="#">Chemka Hot Springs</a></li>
-            <li style="padding:8px 20px;"><a href="#">Kikuletwa</a></li>
+          <ul style="display:none; position:absolute; top:100%; left:0; background:white; list-style:none; padding:10px; margin:0; box-shadow:0 6px 12px rgba(0,0,0,0.1);">
+            <li><a href="#">Arusha Park</a></li>
+            <li><a href="#">Lake Duluti</a></li>
+            <li><a href="#">Materuni Waterfalls</a></li>
+            <li><a href="#">Chemka Hot Springs</a></li>
+            <li><a href="#">Kikuletwa</a></li>
           </ul>
         </li>
+
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
+<!-- JavaScript for Dropdowns and Mobile -->
+<script>
+  // Mobile Menu Toggle
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    const isVisible = nav.style.display === "flex";
+    if (isVisible) {
+      nav.style.display = "none";
+    } else {
+      nav.style.display = "flex";
+      nav.style.flexDirection = "column";
+      nav.style.alignItems = "flex-start";
+    }
+
+    // Show all submenus for mobile
+    nav.querySelectorAll("ul").forEach(ul => {
+      ul.style.display = "block";
+      ul.style.position = "relative";
+      ul.style.boxShadow = "none";
+      ul.style.background = "transparent";
+      ul.style.paddingLeft = "20px";
+    });
+  }
+
+  // Show/hide hamburger button and reset menu on resize
+  window.addEventListener("load", handleResize);
+  window.addEventListener("resize", handleResize);
+
+  function handleResize() {
+    const nav = document.getElementById("navLinks");
+    if (window.innerWidth < 768) {
+      document.getElementById("hamburger").style.display = "block";
+      nav.style.display = "none";
+    } else {
+      document.getElementById("hamburger").style.display = "none";
+      nav.style.display = "flex";
+      nav.style.flexDirection = "row";
+      nav.querySelectorAll("ul").forEach(ul => {
+        ul.style.display = "none";
+        ul.style.position = "absolute";
+        ul.style.background = "white";
+      });
+    }
+  }
+
+  // Hover dropdown for desktop
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth >= 768) {
+      document.querySelectorAll("nav > ul > li").forEach(li => {
+        li.addEventListener("mouseenter", () => {
+          const submenu = li.querySelector("ul");
+          if (submenu) submenu.style.display = "block";
+        });
+        li.addEventListener("mouseleave", () => {
+          const submenu = li.querySelector("ul");
+          if (submenu) submenu.style.display = "none";
+        });
+      });
+    }
+  });
+</script>
+
+  
 <!-- Hamburger Toggle Script -->
 <script>
   function toggleMenu() {
