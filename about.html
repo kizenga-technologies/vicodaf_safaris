@@ -193,68 +193,113 @@
   </div>
 
   <!-- Navigation Bar -->
-  <header>
-    <nav>
-      <a href="index.html"><img src="images/vicodaf_logo.png" style="border-radius: 50%"alt="Vicodaf Safaris"></a>
-      <ul class="nav-links">
+
+  <!-- Navigation Bar with Hamburger -->
+<header style="background:white; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+  <div style="max-width:1200px; margin:auto; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;">
+    <!-- Logo -->
+    <a href="index.html"><img src="images/logo.png" alt="Vicodaf Safaris" style="height:50px;"></a>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button onclick="toggleMenu()" style="background:none; border:none; font-size:24px; cursor:pointer; display:none;" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav id="mainNav" style="flex-grow:1;">
+      <ul style="display:flex; flex-wrap:wrap; gap:25px; list-style:none; margin:0; padding:0; justify-content:flex-end;" id="navLinks">
         <li><a href="index.html">Home</a></li>
-        <li>
+        <li style="position:relative;">
           <a href="#">About Us</a>
-          <ul class="dropdown">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="vehicles.html">Our Safari Vehicles</a></li>
-            <li><a href="payment-policy.html">Payment Policy</a></li>
+          <ul style="display:none; position:absolute; top:30px; left:0; background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:10px 0; min-width:180px;">
+            <li style="padding:8px 20px;"><a href="about.html">About Us</a></li>
+            <li style="padding:8px 20px;"><a href="team.html">Our Team</a></li>
+            <li style="padding:8px 20px;"><a href="vehicles.html">Our Safari Vehicles</a></li>
+            <li style="padding:8px 20px;"><a href="payment-policy.html">Payment Policy</a></li>
           </ul>
         </li>
         <li><a href="safaris.html">Safaris</a></li>
-        <li>
+        <li style="position:relative;">
           <a href="#">Destinations</a>
-          <ul class="dropdown">
-            <li><a href="#">Serengeti</a></li>
-            <li><a href="#">Ngorongoro</a></li>
-            <li><a href="#">Tarangire</a></li>
-            <li><a href="#">Lake Manyara</a></li>
-            <li><a href="#">Arusha NP</a></li>
-            <li><a href="#">Ruaha</a></li>
-            <li><a href="#">Selous</a></li>
-            <li><a href="#">Mikumi</a></li>
-            <li><a href="#">Zanzibar</a></li>
-            <li><a href="#">Mount Kilimanjaro</a></li>
+          <ul style="display:none; position:absolute; top:30px; left:0; background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:10px 0; min-width:180px;">
+            <li style="padding:8px 20px;"><a href="#">Serengeti</a></li>
+            <li style="padding:8px 20px;"><a href="#">Ngorongoro</a></li>
+            <li style="padding:8px 20px;"><a href="#">Tarangire</a></li>
+            <li style="padding:8px 20px;"><a href="#">Lake Manyara</a></li>
+            <li style="padding:8px 20px;"><a href="#">Arusha NP</a></li>
+            <li style="padding:8px 20px;"><a href="#">Ruaha</a></li>
+            <li style="padding:8px 20px;"><a href="#">Selous</a></li>
+            <li style="padding:8px 20px;"><a href="#">Mikumi</a></li>
+            <li style="padding:8px 20px;"><a href="#">Zanzibar</a></li>
+            <li style="padding:8px 20px;"><a href="#">Mount Kilimanjaro</a></li>
           </ul>
         </li>
-        <li>
+        <li style="position:relative;">
           <a href="#">Climbing</a>
-          <ul class="dropdown">
-            <li><a href="#">Mount Kilimanjaro</a></li>
-            <li><a href="#">Mount Meru</a></li>
-            <li><a href="#">Ol Doinyo Lengai</a></li>
+          <ul style="display:none; position:absolute; top:30px; left:0; background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:10px 0; min-width:180px;">
+            <li style="padding:8px 20px;"><a href="#">Mount Kilimanjaro</a></li>
+            <li style="padding:8px 20px;"><a href="#">Mount Meru</a></li>
+            <li style="padding:8px 20px;"><a href="#">Ol Doinyo Lengai</a></li>
           </ul>
         </li>
-        <li>
+        <li style="position:relative;">
           <a href="#">Experiences</a>
-          <ul class="dropdown">
-            <li><a href="#">Hot Air Balloon</a></li>
-            <li><a href="#">Cultural Tours</a></li>
-            <li><a href="#">Bird Watching</a></li>
-            <li><a href="#">Walking Safaris</a></li>
-            <li><a href="#">Honeymoon Safari</a></li>
+          <ul style="display:none; position:absolute; top:30px; left:0; background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:10px 0; min-width:180px;">
+            <li style="padding:8px 20px;"><a href="#">Hot Air Balloon</a></li>
+            <li style="padding:8px 20px;"><a href="#">Cultural Tours</a></li>
+            <li style="padding:8px 20px;"><a href="#">Bird Watching</a></li>
+            <li style="padding:8px 20px;"><a href="#">Walking Safaris</a></li>
+            <li style="padding:8px 20px;"><a href="#">Honeymoon Safari</a></li>
           </ul>
         </li>
-        <li>
+        <li style="position:relative;">
           <a href="#">Day Trips</a>
-          <ul class="dropdown">
-            <li><a href="#">Arusha Park</a></li>
-            <li><a href="#">Lake Duluti</a></li>
-            <li><a href="#">Materuni Waterfalls</a></li>
-            <li><a href="#">Chemka Hot Springs</a></li>
-            <li><a href="#">Kikuletwa</a></li>
+          <ul style="display:none; position:absolute; top:30px; left:0; background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:10px 0; min-width:180px;">
+            <li style="padding:8px 20px;"><a href="#">Arusha Park</a></li>
+            <li style="padding:8px 20px;"><a href="#">Lake Duluti</a></li>
+            <li style="padding:8px 20px;"><a href="#">Materuni Waterfalls</a></li>
+            <li style="padding:8px 20px;"><a href="#">Chemka Hot Springs</a></li>
+            <li style="padding:8px 20px;"><a href="#">Kikuletwa</a></li>
           </ul>
         </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
+
+<!-- Hamburger Toggle Script -->
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById("navLinks");
+    if (nav.style.display === "flex") {
+      nav.style.display = "none";
+    } else {
+      nav.style.display = "flex";
+      nav.style.flexDirection = "column";
+      nav.style.background = "#fff";
+      nav.style.padding = "10px";
+    }
+  }
+
+  // Make hamburger visible on small screens
+  window.addEventListener('load', function () {
+    if (window.innerWidth < 768) {
+      document.getElementById('hamburger').style.display = 'block';
+      document.getElementById('navLinks').style.display = 'none';
+    }
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth < 768) {
+      document.getElementById('hamburger').style.display = 'block';
+      document.getElementById('navLinks').style.display = 'none';
+    } else {
+      document.getElementById('hamburger').style.display = 'none';
+      document.getElementById('navLinks').style.display = 'flex';
+    }
+  });
+</script>
 
   <!-- Banner Section -->
   <header class="hero">
