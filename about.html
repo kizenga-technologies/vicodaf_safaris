@@ -2,64 +2,266 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us – Vicodaf Safaris</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Vicodaf Safaris</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; color: #333; line-height: 1.6; }
-    /* Header/Nav */
-    .top-bar { background: #f4f4f4; padding: 8px 20px; font-size: 0.9em; display: flex; justify-content: space-between; }
-    .top-bar .contact-info span { margin-right: 15px; }
-    nav.main-nav { background: #0b2239; padding: 15px 20px; display: flex; align-items: center; }
-    nav.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 20px; }
-    nav.main-nav a { color: white; text-decoration: none; }
-    nav.main-nav .menu-toggle { display: none; color: white; font-size: 1.2em; cursor: pointer; }
-    /* Existing banner, sections, footer tweaks */
-    footer { background: #0b2239; color: #fff; padding: 30px 20px; text-align: center; }
-    footer .footer-links a { color: #fbb03b; margin: 0 10px; text-decoration: none; font-size: 0.9em; }
-    footer small { display: block; margin-top: 10px; font-size: 0.8em; color: #ccc; }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header Top */
+    .header-top {
+      background: #f5f5f5;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-bottom: 1px solid #ddd;
+    }
+    .header-top .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .header-top .left span, .header-top .right button {
+      margin-right: 15px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .header-top i {
+      margin-right: 6px;
+      color: #0b2239;
+    }
+
+    /* Navbar */
+    header {
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 15px 20px;
+    }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav img {
+      height: 50px;
+    }
+    ul.nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+    }
+    ul.nav-links > li {
+      position: relative;
+    }
+    ul.nav-links li a {
+      color: #0b2239;
+      font-weight: 500;
+    }
+    ul.nav-links li:hover .dropdown {
+      display: block;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      min-width: 180px;
+      z-index: 99;
+    }
+    .dropdown li {
+      padding: 8px 20px;
+      white-space: nowrap;
+    }
+    .dropdown li:hover {
+      background: #fbb03b;
+      color: white;
+    }
+
+    /* About Page Sections */
+    header.hero {
+      background: url('images/about-banner.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+    header.hero h1 {
+      font-size: 3em;
+    }
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    .section h2 {
+      font-size: 2.5em;
+      color: #0b2239;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .two-columns > div {
+      flex: 1;
+      min-width: 280px;
+    }
+    .highlight-box {
+      background: #fdfcf9;
+      padding: 30px;
+      border-left: 5px solid #fbb03b;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .values {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .value-box {
+      flex: 1;
+      min-width: 250px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .value-box i {
+      color: #fbb03b;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0b2239;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer a {
+      color: #fbb03b;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      nav.main-nav ul { display: none; flex-direction: column; background: #0b2239; position: absolute; top: 55px; left: 0; right: 0; }
-      nav.main-nav .menu-toggle { display: block; }
+      .two-columns { flex-direction: column; }
+      ul.nav-links { flex-direction: column; gap: 10px; }
+      header.hero h1 { font-size: 2em; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Actual Top Bar -->
-  <div class="top-bar">
-    <div class="contact-info">
-      <span><i class="fa fa-envelope"></i> info@vicodafsafaris.com</span>
-      <span><i class="fa fa-phone"></i> +255 712 345 678</span>
-      <span><i class="fa fa-map-marker-alt"></i> Arusha, Tanzania</span>
-    </div>
-    <div class="lang-switch">
-      EN | DE | FR | IT | ES | CN | JP | RU
+  <!-- Top Header -->
+  <div class="header-top">
+    <div class="container">
+      <div class="left">
+        <span><i class="fas fa-envelope"></i> info@vicodafsafaris.com | bookings@vicodafsafaris.com</span>
+        <span><i class="fab fa-whatsapp"></i> +255 712 345 678</span>
+        <span><i class="fas fa-map-marker-alt"></i> Arusha, Tanzania</span>
+      </div>
+      <div class="right">
+        <button><img src="https://flagcdn.com/us.svg" width="18"> EN</button>
+        <button><img src="https://flagcdn.com/fr.svg" width="18"> FR</button>
+        <button><img src="https://flagcdn.com/de.svg" width="18"> DE</button>
+        <button><img src="https://flagcdn.com/it.svg" width="18"> IT</button>
+        <button><img src="https://flagcdn.com/es.svg" width="18"> ES</button>
+        <button><img src="https://flagcdn.com/cn.svg" width="18"> CN</button>
+        <button><img src="https://flagcdn.com/jp.svg" width="18"> JP</button>
+        <button><img src="https://flagcdn.com/ru.svg" width="18"> RU</button>
+      </div>
     </div>
   </div>
 
-  <!-- Actual Main Navigation -->
-  <nav class="main-nav">
-    <i class="fa fa-bars menu-toggle"></i>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About Us</a></li>
-      <li><a href="/vehicles">Our Safari Vehicles</a></li>
-      <li><a href="/safaris">Safaris</a></li>
-      <li><a href="/destinations">Destinations</a></li>
-      <li><a href="/climbing">Climbing</a></li>
-      <li><a href="/experiences">Experiences</a></li>
-      <li><a href="/day-trips">Day Trips</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <a href="index.html"><img src="images/logo.png" alt="Vicodaf Safaris"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">About Us</a>
+          <ul class="dropdown">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="vehicles.html">Our Safari Vehicles</a></li>
+            <li><a href="payment-policy.html">Payment Policy</a></li>
+          </ul>
+        </li>
+        <li><a href="safaris.html">Safaris</a></li>
+        <li>
+          <a href="#">Destinations</a>
+          <ul class="dropdown">
+            <li><a href="#">Serengeti</a></li>
+            <li><a href="#">Ngorongoro</a></li>
+            <li><a href="#">Tarangire</a></li>
+            <li><a href="#">Lake Manyara</a></li>
+            <li><a href="#">Arusha NP</a></li>
+            <li><a href="#">Ruaha</a></li>
+            <li><a href="#">Selous</a></li>
+            <li><a href="#">Mikumi</a></li>
+            <li><a href="#">Zanzibar</a></li>
+            <li><a href="#">Mount Kilimanjaro</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Climbing</a>
+          <ul class="dropdown">
+            <li><a href="#">Mount Kilimanjaro</a></li>
+            <li><a href="#">Mount Meru</a></li>
+            <li><a href="#">Ol Doinyo Lengai</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Experiences</a>
+          <ul class="dropdown">
+            <li><a href="#">Hot Air Balloon</a></li>
+            <li><a href="#">Cultural Tours</a></li>
+            <li><a href="#">Bird Watching</a></li>
+            <li><a href="#">Walking Safaris</a></li>
+            <li><a href="#">Honeymoon Safari</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Day Trips</a>
+          <ul class="dropdown">
+            <li><a href="#">Arusha Park</a></li>
+            <li><a href="#">Lake Duluti</a></li>
+            <li><a href="#">Materuni Waterfalls</a></li>
+            <li><a href="#">Chemka Hot Springs</a></li>
+            <li><a href="#">Kikuletwa</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Banner Section -->
-  <header style="background: url('images/about-banner.jpg') center/cover no-repeat; height: 300px; display: flex; align-items: center; justify-content: center; color: white; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); text-align: center;">
+  <header class="hero">
     <h1>About Vicodaf Safaris</h1>
   </header>
 
-  <!-- Content Sections (unchanged) -->
+  <!-- Introduction Section -->
   <section class="section">
     <div class="two-columns">
       <div>
@@ -72,8 +274,7 @@
     </div>
   </section>
 
-  <!-- ... rest of your sections unchanged ... -->
-   <!-- Why Choose Us Section -->
+  <!-- Why Choose Us Section -->
   <section class="section" style="background:#fdfcf9;">
     <h2>Why Choose Vicodaf Safaris</h2>
     <div class="values">
@@ -114,27 +315,10 @@
     </div>
   </section>
 
-  <!-- Footer (from GitHub template) -->
+  <!-- Footer -->
   <footer>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/tours">Tours</a>
-      <a href="/about">About Us</a>
-      <a href="/contact">Contact</a>
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms &amp; Conditions</a>
-    </div>
-    <p>Designed by Kizenga Technologies</p>
-    <small>&copy; 2025 Vicodaf Safaris. All rights reserved.</small>
+    <p>&copy; 2025 Vicodaf Safaris. All rights reserved. | Website by <a href="#">Kizenga Technologies</a></p>
   </footer>
-
-  <script>
-    // Mobile nav toggle
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-      const menu = document.querySelector('nav.main-nav ul');
-      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-    });
-  </script>
 
 </body>
 </html>
