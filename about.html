@@ -192,88 +192,202 @@
     </div>
   </div>
 
-  <!-- Navigation Bar -->
+  <!-- Vicodaf Safaris Navigation Bar -->
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Vicodaf Safaris Navigation with Hover Dropdown and Mobile Menu -->
-<header style="background:#fff; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-  <div style="max-width:1200px; margin:auto; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;">
-    <!-- Logo -->
-    <a href="index.html"><img src="images/logo.png" alt="Vicodaf Safaris" style="height:50px;"></a>
+<style>
+  body { margin: 0; font-family: 'Segoe UI', sans-serif; }
+  .navbar {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .navbar-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  .navbar-logo img {
+    height: 50px;
+  }
+  .navbar-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .navbar-menu li {
+    list-style: none;
+    position: relative;
+  }
+  .navbar-menu a {
+    text-decoration: none;
+    color: #222;
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+  }
+  .navbar-menu li:hover > ul {
+    display: block;
+  }
+  .navbar-menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .navbar-menu ul ul li {
+    width: 220px;
+  }
+  .navbar-menu ul ul ul {
+    left: 100%;
+    top: 0;
+  }
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .whatsapp-btn {
+    background: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+  }
+  .whatsapp-btn i { font-size: 16px; }
 
-    <!-- Hamburger Button -->
-    <button onclick="toggleMenu()" style="background:none; border:none; font-size:24px; cursor:pointer; display:none;" id="hamburger">
+  @media (max-width: 991px) {
+    .navbar-menu {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+    }
+    .navbar-menu.show {
+      display: flex;
+    }
+    .navbar-menu ul ul {
+      position: static;
+      box-shadow: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+</style>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a href="index.html"><img src="images/logo.png" alt="Vicodaf Safaris"></a>
+    </div>
+    <button class="hamburger" onclick="document.querySelector('.navbar-menu').classList.toggle('show')">
       <i class="fas fa-bars"></i>
     </button>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="#">About Us</a>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="vehicles.html">Our Safari Vehicles</a></li>
+        </ul>
+      </li>
+      <li><a href="safaris.html">Safaris</a></li>
+      <li>
+        <a href="#">Destinations</a>
+        <ul>
+          <li><a href="#">Arusha National Park</a></li>
+          <li><a href="#">Tarangire National Park</a></li>
+          <li><a href="#">Ngorongoro Crater</a></li>
+          <li><a href="#">Lake Natron</a></li>
+          <li><a href="#">Ndutu Area</a></li>
+          <li><a href="#">Lake Eyasi</a></li>
+          <li><a href="#">Serengeti National Park</a></li>
+          <li><a href="#">Lake Manyara National Park</a></li>
+          <li><a href="#">Mkomazi National Park</a></li>
+          <li><a href="#">Selous/Nyerere Park</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Climbing</a>
+        <ul>
+          <li>
+            <a href="#">Kilimanjaro Trekking</a>
+            <ul>
+              <li><a href="#">5 Days Marangu Route</a></li>
+              <li><a href="#">6 Days Marangu Route</a></li>
+              <li><a href="#">6 Days Machame Route</a></li>
+              <li><a href="#">7 Days Machame Route</a></li>
+              <li><a href="#">6 Days Rongai Route</a></li>
+              <li><a href="#">7 Days Rongai Route</a></li>
+              <li><a href="#">7 Days Lemosho Route</a></li>
+              <li><a href="#">8 Days Lemosho Route</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Mount Meru Trekking</a>
+            <ul>
+              <li><a href="#">3 Days Mount Meru Trek</a></li>
+              <li><a href="#">4 Days Best Mount Meru</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Mount Longido Trekking</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Experiences</a>
+        <ul>
+          <li><a href="#">Fly-In & Fly-Out Safari</a></li>
+          <li><a href="#">Bird Watching Safaris</a></li>
+          <li><a href="#">Walking Safaris</a></li>
+          <li><a href="#">Cultural & Eco-Tourism</a></li>
+          <li><a href="#">Family Safaris</a></li>
+          <li><a href="#">Hot-Air Balloon</a></li>
+          <li><a href="#">Night Game Drives</a></li>
+          <li><a href="#">Photo Safaris</a></li>
+          <li><a href="#">Private Reserves</a></li>
+          <li><a href="#">Chimpanzee Trekking</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Day Trips</a>
+        <ul>
+          <li><a href="#">Materuni Waterfalls</a></li>
+          <li><a href="#">Chemka Hot Spring</a></li>
+          <li><a href="#">Ngorongoro Day Tour</a></li>
+          <li><a href="#">Tarangire Day Tour</a></li>
+          <li><a href="#">Arusha Day Tour</a></li>
+        </ul>
+      </li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
 
-    <!-- Navigation Menu -->
-    <nav id="mainNav" style="flex-grow:1;">
-      <ul id="navLinks" style="display:flex; flex-wrap:wrap; gap:25px; list-style:none; margin:0; padding:0; justify-content:flex-end;">
-        <li style="position:relative;"><a href="index.html">Home</a></li>
-
-        <li style="position:relative;">
-          <a href="#">About Us</a>
-          <ul style="display:none; position:absolute; top:100%; left:0; background:white; list-style:none; padding:10px; margin:0; box-shadow:0 6px 12px rgba(0,0,0,0.1);">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="vehicles.html">Our Safari Vehicles</a></li>
-            <li><a href="payment-policy.html">Payment Policy</a></li>
-          </ul>
-        </li>
-
-        <li><a href="safaris.html">Safaris</a></li>
-
-        <li style="position:relative;">
-          <a href="#">Destinations</a>
-          <ul style="display:none; position:absolute; top:100%; left:0; background:white; list-style:none; padding:10px; margin:0; box-shadow:0 6px 12px rgba(0,0,0,0.1);">
-            <li><a href="#">Serengeti</a></li>
-            <li><a href="#">Ngorongoro</a></li>
-            <li><a href="#">Tarangire</a></li>
-            <li><a href="#">Lake Manyara</a></li>
-            <li><a href="#">Arusha NP</a></li>
-            <li><a href="#">Ruaha</a></li>
-            <li><a href="#">Selous</a></li>
-            <li><a href="#">Mikumi</a></li>
-            <li><a href="#">Zanzibar</a></li>
-            <li><a href="#">Mount Kilimanjaro</a></li>
-          </ul>
-        </li>
-
-        <li style="position:relative;">
-          <a href="#">Climbing</a>
-          <ul style="display:none; position:absolute; top:100%; left:0; background:white; list-style:none; padding:10px; margin:0; box-shadow:0 6px 12px rgba(0,0,0,0.1);">
-            <li><a href="#">Mount Kilimanjaro</a></li>
-            <li><a href="#">Mount Meru</a></li>
-            <li><a href="#">Ol Doinyo Lengai</a></li>
-          </ul>
-        </li>
-
-        <li style="position:relative;">
-          <a href="#">Experiences</a>
-          <ul style="display:none; position:absolute; top:100%; left:0; background:white; list-style:none; padding:10px; margin:0; box-shadow:0 6px 12px rgba(0,0,0,0.1);">
-            <li><a href="#">Hot Air Balloon</a></li>
-            <li><a href="#">Cultural Tours</a></li>
-            <li><a href="#">Bird Watching</a></li>
-            <li><a href="#">Walking Safaris</a></li>
-            <li><a href="#">Honeymoon Safari</a></li>
-          </ul>
-        </li>
-
-        <li style="position:relative;">
-          <a href="#">Day Trips</a>
-          <ul style="display:none; position:absolute; top:100%; left:0; background:white; list-style:none; padding:10px; margin:0; box-shadow:0 6px 12px rgba(0,0,0,0.1);">
-            <li><a href="#">Arusha Park</a></li>
-            <li><a href="#">Lake Duluti</a></li>
-            <li><a href="#">Materuni Waterfalls</a></li>
-            <li><a href="#">Chemka Hot Springs</a></li>
-            <li><a href="#">Kikuletwa</a></li>
-          </ul>
-        </li>
-
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/255712345678" class="whatsapp-btn" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
   </div>
-</header>
+</nav>
+
+<!-- Ensure font awesome is loaded -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
 <!-- JavaScript for Dropdowns and Mobile -->
 <script>
