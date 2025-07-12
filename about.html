@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Vicodaf Safaris</title>
+  <title>About-Us|Vicodaf Safaris</title>
   <link rel="stylesheet" href="css/gallery.css">
   <link rel="stylesheet" href="css/header-nav.css">
   <link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
@@ -107,7 +108,7 @@
   }
 
   @media (max-width: 480px) {
-    #heroSlider { height: 300px; }
+    #heroSlider { height: 400px; }
   }
 
     header nav ul li {
@@ -177,73 +178,6 @@
       display: block;
     }
   }
-
-    /* About Page Sections */
-    header.hero {
-      background: url('images/about-banner.jpg') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-      text-align: center;
-    }
-    header.hero h1 {
-      font-size: 3em;
-    }
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-    .section h2 {
-      font-size: 2.5em;
-      color: #0b2239;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .two-columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-    .two-columns > div {
-      flex: 1;
-      min-width: 280px;
-    }
-    .highlight-box {
-      background: #fdfcf9;
-      padding: 30px;
-      border-left: 5px solid #fbb03b;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .values {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-    .value-box {
-      flex: 1;
-      min-width: 250px;
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-    .value-box i {
-      color: #fbb03b;
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 768px) {
-      .two-columns { flex-direction: column; }
-      ul.nav-links { flex-direction: column; gap: 10px; }
-      header.hero h1 { font-size: 2em; }
-    }
 
   </style>
 </head>
@@ -405,7 +339,7 @@ if (window.innerWidth <= 768) {
   document.getElementById("hamburger").style.display = "block";
 }
 </script>
- 
+  
 <script>
   function toggleMenu() {
     const nav = document.getElementById('mainNav');
@@ -422,67 +356,8 @@ if (window.innerWidth <= 768) {
       }
     });
   });
-</script> 
-
-   <!-- Banner Section -->
-  <header class="hero">
-    <h1>About Vicodaf Safaris</h1>
-  </header>
-
-  <!-- Introduction Section -->
-  <section class="section">
-    <div class="two-columns">
-      <div>
-        <h2>Who We Are</h2>
-        <p>Vicodaf Safaris is a locally owned and operated tour company based in Arusha, Tanzania. Our mission is to deliver life-changing safari experiences by combining local expertise with international standards. From the majestic plains of the Serengeti to the peaks of Mount Kilimanjaro, we curate immersive and unforgettable journeys for every traveler.</p>
-      </div>
-      <div>
-        <img src="images/about-us.avif" alt="Vicodaf Team" style="width:100%; border-radius:10px;">
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us Section -->
-  <section class="section" style="background:#fdfcf9;">
-    <h2>Why Choose Vicodaf Safaris</h2>
-    <div class="values">
-      <div class="value-box">
-        <i class="fas fa-binoculars"></i>
-        <h3>Tailored Itineraries</h3>
-        <p>We offer 100% customizable tours based on your interests, schedule, and budget.</p>
-      </div>
-      <div class="value-box">
-        <i class="fas fa-users"></i>
-        <h3>Experienced Guides</h3>
-        <p>Our guides are professional, knowledgeable and fluent in multiple languages.</p>
-      </div>
-      <div class="value-box">
-        <i class="fas fa-globe-africa"></i>
-        <h3>Local Expertise</h3>
-        <p>We are Tanzanians who know our land deeply, allowing us to give you authentic experiences.</p>
-      </div>
-      <div class="value-box">
-        <i class="fas fa-star"></i>
-        <h3>Top Rated Service</h3>
-        <p>We are committed to excellence, with countless positive reviews from satisfied travelers.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission and Vision Section -->
-  <section class="section">
-    <div class="two-columns">
-      <div class="highlight-box">
-        <h2>Our Mission</h2>
-        <p>To connect people to the heart of Africa through personalized, ethical, and sustainable safari experiences.</p>
-      </div>
-      <div class="highlight-box">
-        <h2>Our Vision</h2>
-        <p>To be the most trusted and inspiring safari company in Tanzania, fostering respect for wildlife, nature, and local cultures.</p>
-      </div>
-    </div>
-  </section>
-
+</script>
+  
 <footer>
   <div class="footer-grid">
     <div><h4>Contact</h4><p>Phone: +255 679 515 834</p><p>Email: info@vicodafsafaris.co.tz</p></div>
