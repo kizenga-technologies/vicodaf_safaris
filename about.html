@@ -230,103 +230,137 @@
     </div>
   </div>
 
-  <!-- Vicodaf Safaris Navigation Bar -->
-<!-- Font Awesome for icons -->
+  <!-- Navigation -->
+<header style="background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); position:sticky; top:0; z-index:999;">
+  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:15px 20px; flex-wrap:wrap;">
+    <a href="index.html"><img src="images/vicodaf_logo.png" style="height:50px; border-radius: 50%;"></a>
+    <div onclick="toggleMenu()" style="display:none; font-size:24px; cursor:pointer;" id="burger">&#9776;</div>
+    <nav id="mainNav" style="display:flex; flex-wrap:wrap;">
+      <ul style="list-style:none; display:flex; flex-direction:row; flex-wrap:wrap; margin:0; padding:0; align-items:center; gap:20px;" id="menuList">
 
-<nav class="navbar">
-  <div class="navbar-container">
-    <div class="navbar-logo">
-      <a href="index.html"><img src="images/logo.png" alt="Vicodaf Safaris"></a>
-    </div>
-    <button class="hamburger" onclick="document.querySelector('.navbar-menu').classList.toggle('show')">
-      <i class="fas fa-bars"></i>
-    </button>
-    <ul class="navbar-menu">
-      <li><a href="index.html">Home</a></li>
-      <li>
-        <a href="#">About Us</a>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="vehicles.html">Our Safari Vehicles</a></li>
-        </ul>
-      </li>
-      <li><a href="safaris.html">Safaris</a></li>
-      <li>
-        <a href="#">Destinations</a>
-        <ul>
-          <li><a href="#">Arusha National Park</a></li>
-          <li><a href="#">Tarangire National Park</a></li>
-          <li><a href="#">Ngorongoro Crater</a></li>
-          <li><a href="#">Lake Natron</a></li>
-          <li><a href="#">Ndutu Area</a></li>
-          <li><a href="#">Lake Eyasi</a></li>
-          <li><a href="#">Serengeti National Park</a></li>
-          <li><a href="#">Lake Manyara National Park</a></li>
-          <li><a href="#">Mkomazi National Park</a></li>
-          <li><a href="#">Selous/Nyerere Park</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Climbing</a>
-        <ul>
-          <li>
-            <a href="#">Kilimanjaro Trekking</a>
-            <ul>
-              <li><a href="#">5 Days Marangu Route</a></li>
-              <li><a href="#">6 Days Marangu Route</a></li>
-              <li><a href="#">6 Days Machame Route</a></li>
-              <li><a href="#">7 Days Machame Route</a></li>
-              <li><a href="#">6 Days Rongai Route</a></li>
-              <li><a href="#">7 Days Rongai Route</a></li>
-              <li><a href="#">7 Days Lemosho Route</a></li>
-              <li><a href="#">8 Days Lemosho Route</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Mount Meru Trekking</a>
-            <ul>
-              <li><a href="#">3 Days Mount Meru Trek</a></li>
-              <li><a href="#">4 Days Best Mount Meru</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Mount Longido Trekking</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Experiences</a>
-        <ul>
-          <li><a href="#">Fly-In & Fly-Out Safari</a></li>
-          <li><a href="#">Bird Watching Safaris</a></li>
-          <li><a href="#">Walking Safaris</a></li>
-          <li><a href="#">Cultural & Eco-Tourism</a></li>
-          <li><a href="#">Family Safaris</a></li>
-          <li><a href="#">Hot-Air Balloon</a></li>
-          <li><a href="#">Night Game Drives</a></li>
-          <li><a href="#">Photo Safaris</a></li>
-          <li><a href="#">Private Reserves</a></li>
-          <li><a href="#">Chimpanzee Trekking</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Day Trips</a>
-        <ul>
-          <li><a href="#">Materuni Waterfalls</a></li>
-          <li><a href="#">Chemka Hot Spring</a></li>
-          <li><a href="#">Ngorongoro Day Tour</a></li>
-          <li><a href="#">Tarangire Day Tour</a></li>
-          <li><a href="#">Arusha Day Tour</a></li>
-        </ul>
-      </li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+        <li><a href="index.html">Home</a></li>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/255712345678" class="whatsapp-btn" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
+        <li class="has-submenu">
+          <a href="#">About Us</a>
+          <ul class="submenu">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="vehicles.html">Our Safari Vehicles</a></li>
+          </ul>
+        </li>
+
+        <li><a href="safaris.html">Safaris</a></li>
+
+        <li class="has-submenu">
+          <a href="#">Destinations</a>
+          <ul class="submenu">
+            <li><a href="#">Serengeti</a></li>
+            <li><a href="#">Ngorongoro</a></li>
+            <li><a href="#">Tarangire</a></li>
+            <li><a href="#">Lake Manyara</a></li>
+            <li><a href="#">Arusha NP</a></li>
+            <li><a href="#">Ruaha</a></li>
+            <li><a href="#">Selous</a></li>
+            <li><a href="#">Mikumi</a></li>
+            <li><a href="#">Zanzibar</a></li>
+            <li><a href="#">Mt. Kilimanjaro</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="#">Climbing</a>
+          <ul class="submenu">
+            <li><a href="#">Mount Kilimanjaro</a></li>
+            <li><a href="#">Mount Meru</a></li>
+            <li><a href="#">Ol Doinyo Lengai</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="#">Experiences</a>
+          <ul class="submenu">
+            <li><a href="#">Hot Air Balloon</a></li>
+            <li><a href="#">Cultural Tours</a></li>
+            <li><a href="#">Bird Watching</a></li>
+            <li><a href="#">Walking Safaris</a></li>
+            <li><a href="#">Honeymoon Safari</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="#">Day Trips</a>
+          <ul class="submenu">
+            <li><a href="#">Arusha Park</a></li>
+            <li><a href="#">Lake Duluti</a></li>
+            <li><a href="#">Materuni Waterfalls</a></li>
+            <li><a href="#">Chemka Hot Springs</a></li>
+            <li><a href="#">Kikuletwa</a></li>
+          </ul>
+        </li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('mainNav');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  // Toggle submenu for mobile
+  document.querySelectorAll('.has-submenu > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parent = this.parentElement;
+        parent.classList.toggle('open');
+      }
+    });
+  });
+</script>
+
+<script>
+function changeLang(lang) {
+  alert("Language changed to: " + lang + " (not implemented)");
+}
+
+function toggleMenu() {
+  const nav = document.getElementById("mainNav");
+  if (nav.style.display === "flex") {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "flex";
+    nav.style.flexDirection = "column";
+    nav.style.background = "#fff";
+    nav.style.position = "absolute";
+    nav.style.top = "80px";
+    nav.style.left = "0";
+    nav.style.width = "100%";
+    nav.style.padding = "15px 20px";
+    nav.style.boxShadow = "0 8px 16px rgba(0,0,0,0.1)";
+  }
+}
+
+window.addEventListener("resize", function() {
+  if (window.innerWidth > 768) {
+    document.getElementById("mainNav").style.display = "flex";
+    document.getElementById("mainNav").style.flexDirection = "row";
+    document.getElementById("mainNav").style.position = "static";
+    document.getElementById("mainNav").style.boxShadow = "none";
+  } else {
+    document.getElementById("mainNav").style.display = "none";
+  }
+});
+
+// Initial check
+if (window.innerWidth <= 768) {
+  document.getElementById("mainNav").style.display = "none";
+  document.getElementById("hamburger").style.display = "block";
+}
+</script>
 
   <!-- Banner Section -->
   <header class="hero">
@@ -391,104 +425,6 @@
   <footer>
     <p>&copy; 2025 Vicodaf Safaris. All rights reserved. | Website by <a href="#">Kizenga Technologies</a></p>
   </footer>
-
-  <!-- Ensure font awesome is loaded -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-
-  <!-- JavaScript for Dropdowns and Mobile -->
-<script>
-  // Mobile Menu Toggle
-  function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    const isVisible = nav.style.display === "flex";
-    if (isVisible) {
-      nav.style.display = "none";
-    } else {
-      nav.style.display = "flex";
-      nav.style.flexDirection = "column";
-      nav.style.alignItems = "flex-start";
-    }
-
-    // Show all submenus for mobile
-    nav.querySelectorAll("ul").forEach(ul => {
-      ul.style.display = "block";
-      ul.style.position = "relative";
-      ul.style.boxShadow = "none";
-      ul.style.background = "transparent";
-      ul.style.paddingLeft = "20px";
-    });
-  }
-
-  // Show/hide hamburger button and reset menu on resize
-  window.addEventListener("load", handleResize);
-  window.addEventListener("resize", handleResize);
-
-  function handleResize() {
-    const nav = document.getElementById("navLinks");
-    if (window.innerWidth < 768) {
-      document.getElementById("hamburger").style.display = "block";
-      nav.style.display = "none";
-    } else {
-      document.getElementById("hamburger").style.display = "none";
-      nav.style.display = "flex";
-      nav.style.flexDirection = "row";
-      nav.querySelectorAll("ul").forEach(ul => {
-        ul.style.display = "none";
-        ul.style.position = "absolute";
-        ul.style.background = "white";
-      });
-    }
-  }
-
-  // Hover dropdown for desktop
-  document.addEventListener("DOMContentLoaded", () => {
-    if (window.innerWidth >= 768) {
-      document.querySelectorAll("nav > ul > li").forEach(li => {
-        li.addEventListener("mouseenter", () => {
-          const submenu = li.querySelector("ul");
-          if (submenu) submenu.style.display = "block";
-        });
-        li.addEventListener("mouseleave", () => {
-          const submenu = li.querySelector("ul");
-          if (submenu) submenu.style.display = "none";
-        });
-      });
-    }
-  });
-</script>
-  
-<!-- Hamburger Toggle Script -->
-<script>
-  function toggleMenu() {
-    var nav = document.getElementById("navLinks");
-    if (nav.style.display === "flex") {
-      nav.style.display = "none";
-    } else {
-      nav.style.display = "flex";
-      nav.style.flexDirection = "column";
-      nav.style.background = "#fff";
-      nav.style.padding = "10px";
-    }
-  }
-
-  // Make hamburger visible on small screens
-  window.addEventListener('load', function () {
-    if (window.innerWidth < 768) {
-      document.getElementById('hamburger').style.display = 'block';
-      document.getElementById('navLinks').style.display = 'none';
-    }
-  });
-
-  window.addEventListener('resize', function () {
-    if (window.innerWidth < 768) {
-      document.getElementById('hamburger').style.display = 'block';
-      document.getElementById('navLinks').style.display = 'none';
-    } else {
-      document.getElementById('hamburger').style.display = 'none';
-      document.getElementById('navLinks').style.display = 'flex';
-    }
-  });
-</script>
 
 </body>
 </html>
