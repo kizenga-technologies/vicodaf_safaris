@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us - Vicodaf Safaris</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
   <style>
     body { margin: 0; font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; }
     a { text-decoration: none; color: inherit; }
@@ -34,61 +35,98 @@
       color: #0b2239;
     }
 
-    /* Navbar */
-    header {
-      background: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      padding: 15px 20px;
+    .navbar {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .navbar-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  .navbar-logo img {
+    height: 50px;
+  }
+  .navbar-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .navbar-menu li {
+    list-style: none;
+    position: relative;
+  }
+  .navbar-menu a {
+    text-decoration: none;
+    color: #222;
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+  }
+  .navbar-menu li:hover > ul {
+    display: block;
+  }
+  .navbar-menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .navbar-menu ul ul li {
+    width: 220px;
+  }
+  .navbar-menu ul ul ul {
+    left: 100%;
+    top: 0;
+  }
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .whatsapp-btn {
+    background: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+  }
+  .whatsapp-btn i { font-size: 16px; }
+
+  @media (max-width: 991px) {
+    .navbar-menu {
+      flex-direction: column;
+      width: 100%;
+      display: none;
     }
-    nav {
-      max-width: 1200px;
-      margin: auto;
+    .navbar-menu.show {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
-    nav img {
-      height: 50px;
+    .navbar-menu ul ul {
+      position: static;
+      box-shadow: none;
     }
-    ul.nav-links {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-      font-size: 15px;
-    }
-    ul.nav-links > li {
-      position: relative;
-    }
-    ul.nav-links li a {
-      color: #0b2239;
-      font-weight: 500;
-    }
-    ul.nav-links li:hover .dropdown {
+    .hamburger {
       display: block;
     }
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 30px;
-      left: 0;
-      background: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 10px 0;
-      min-width: 180px;
-      z-index: 99;
-    }
-    .dropdown li {
-      padding: 8px 20px;
-      white-space: nowrap;
-    }
-    .dropdown li:hover {
-      background: #fbb03b;
-      color: white;
-    }
-
+  }
+    
     /* About Page Sections */
     header.hero {
       background: url('images/about-banner.jpg') center/cover no-repeat;
@@ -194,102 +232,6 @@
 
   <!-- Vicodaf Safaris Navigation Bar -->
 <!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<style>
-  body { margin: 0; font-family: 'Segoe UI', sans-serif; }
-  .navbar {
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-  .navbar-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    flex-wrap: wrap;
-  }
-  .navbar-logo img {
-    height: 50px;
-  }
-  .navbar-menu {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  .navbar-menu li {
-    list-style: none;
-    position: relative;
-  }
-  .navbar-menu a {
-    text-decoration: none;
-    color: #222;
-    padding: 10px 15px;
-    display: block;
-    font-weight: 500;
-  }
-  .navbar-menu li:hover > ul {
-    display: block;
-  }
-  .navbar-menu ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-  }
-  .navbar-menu ul ul li {
-    width: 220px;
-  }
-  .navbar-menu ul ul ul {
-    left: 100%;
-    top: 0;
-  }
-  .hamburger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-  }
-  .whatsapp-btn {
-    background: #25D366;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
-  }
-  .whatsapp-btn i { font-size: 16px; }
-
-  @media (max-width: 991px) {
-    .navbar-menu {
-      flex-direction: column;
-      width: 100%;
-      display: none;
-    }
-    .navbar-menu.show {
-      display: flex;
-    }
-    .navbar-menu ul ul {
-      position: static;
-      box-shadow: none;
-    }
-    .hamburger {
-      display: block;
-    }
-  }
-</style>
 
 <nav class="navbar">
   <div class="navbar-container">
