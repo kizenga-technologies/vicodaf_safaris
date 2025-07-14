@@ -554,13 +554,29 @@ if (window.innerWidth <= 768) {
     <!-- Contact Form -->
     <div style="flex: 1; min-width: 280px;">
       <h3 style="color: #0b2239;">Send Us a Message</h3>
-      <form action="https://formsubmit.io/send/nasalprog@gmail.com" method="post" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
-        <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
-        <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
-        <input type="text" name="subject" placeholder="Subject" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
-        <textarea name="message" rows="5" placeholder="Your Message" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-        <button type="submit" style="background-color: #fbb03b; color: #0b2239; padding: 14px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">Send Message</button>
-      </form>
+      <form action="https://formsubmit.io/send/nasalprog@gmail.com" method="POST" style="display: grid; gap: 20px;">
+  <!-- FormSubmit hidden fields -->
+  <input type="hidden" name="_redirect" value="https://vicodafsafaris.com/thank-you.html">
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Contact Fields -->
+  <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+  <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+  <input type="text" name="subject" placeholder="Subject" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+  <textarea name="message" rows="6" placeholder="Your Message" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+
+  <!-- Google reCAPTCHA -->
+  <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+  <!-- Submit Button -->
+  <button type="submit" style="background: #fbb03b; color: #fff; padding: 14px; border: none; border-radius: 5px; font-weight: bold; font-size: 16px;">
+    Send Message
+  </button>
+</form>
+
+<!-- Load reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     </div>
   </div>
 </section>
