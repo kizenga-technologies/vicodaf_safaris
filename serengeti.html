@@ -595,6 +595,59 @@ if (window.innerWidth <= 768) {
 
   <div style="text-align: center; margin-top: 50px;">
     <a href="#book" style="background: #fbb03b; color: #0b2239; padding: 14px 30px; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 16px;">Book This Safari</a>
+
+    <section id="book">
+  <h2>Book Your Adventure</h2>
+  <p style="text-align:center;">Please fill out the form below:</p>
+<div style="max-width: 600px; margin: auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); font-family: 'Poppins', sans-serif;">
+
+  <h2 style="text-align: center; color: #0b2239; margin-bottom: 20px;">Book Your Adventure</h2>
+
+  <form action="https://formsubmit.co/295597347f8d5f996acc7fae8d864b81" method="POST">
+    <!-- Hidden Fields -->
+    <input type="hidden" name="_next" value="https://kizenga-technologies.github.io/vicodaf_safaris/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Email -->
+    <label>Email:</label>
+    <input type="email" name="Email" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+
+    <!-- Full Name -->
+    <label>Full Name:</label>
+    <input type="text" name="Full Name" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+
+    <!-- Phone Number -->
+    <label>WhatsApp / Phone Number:</label>
+    <input type="tel" name="Phone Number" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+
+    <!-- Tour Package -->
+    <label>Select Tour Package:</label>
+    <select name="Tour Package" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+      <option value="" disabled selected>Select a package</option>
+      <option>2 Nights Serengeti National Park Fly In Short Safari</option>
+      <option>5 Nights Luxury Tanzania Safari/Fly Back from Serengeti</option>
+      <option>8 Nights Serengeti Grand Tour and Safari</option>
+    </select>
+
+    <!-- Number of People -->
+    <label>Number of People:</label>
+    <input type="number" name="Number of People" min="1" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+
+    <!-- Travel Date -->
+    <label>Preferred Travel Date:</label>
+    <input type="date" name="Preferred Travel Date" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 20px;">
+
+    <!-- Notes -->
+    <label>Additional Notes or Questions:</label>
+    <textarea name="Notes" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 25px;"></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" style="width: 100%; background: #0b2239; color: white; padding: 14px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">
+      Submit Booking
+    </button>
+  </form>
+</div>
+</section>
   </div>
 </section>
 
