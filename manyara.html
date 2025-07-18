@@ -527,8 +527,9 @@ if (window.innerWidth <= 768) {
 
 <!-- Banner Section -->
   <header class="hero">
-    <h1>About Vicodaf Safaris</h1>
+    <h1>Lake Manyara National Park</h1>
   </header>
+
   <section style="padding: 40px 20px; max-width: 1200px; margin: auto; font-family: Arial, sans-serif;">
   <h1 style="font-size: 32px; color: #2a2a2a; margin-bottom: 20px;">Lake Manyara National Park</h1>
 
@@ -544,25 +545,41 @@ if (window.innerWidth <= 768) {
     Lake Manyara is ideal for a day safari or as the perfect first stop on a longer northern Tanzania safari circuit, combining well with visits to Tarangire, Ngorongoro Crater, and Serengeti National Park.
   </p>
 
-  <h2 style="margin-top: 40px; font-size: 26px; color: #2a2a2a;">Book This Safari</h2>
+  <h2 style="margin-top: 40px; font-size: 26px; color: #2a2a2a; text-align: center;">Book This Safari</h2>
 
-  <form action="https://formsubmit.co/nasalprog@gmail.com" method="POST" style="margin-top: 20px; display: grid; gap: 15px; max-width: 600px;">
-    <!-- Replace with your actual admin email -->
-    <input type="hidden" name="_subject" value="New Booking Request - Manyara Package">
-    <input type="hidden" name="safari_package" value="Manyara Package">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://github.com/kizenga-technologies/vicodaf_safaris/thank-you.html">
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <form action="https://formsubmit.co/nasalprog@gmail.com" method="POST" style="width: 100%; max-width: 600px; display: grid; gap: 15px;">
+      <!-- Hidden fields -->
+      <input type="hidden" name="_subject" value="New Booking Request - Manyara Package">
+      <input type="hidden" name="safari_package" value="Manyara Package">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://github.com/kizenga-technologies/vicodaf_safaris/thank-you.html">
 
-    <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
-    <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
-    <input type="tel" name="phone" placeholder="Phone Number" style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+      <!-- Form fields -->
+      <input type="text" name="name" placeholder="Your Name" required
+        style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+      
+      <input type="email" name="email" placeholder="Your Email" required
+        style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+      
+      <input type="tel" name="phone" placeholder="Phone Number"
+        style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
 
-    <textarea name="message" placeholder="Your Message or Travel Dates" rows="5" style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+      <input type="date" name="safari_date" placeholder="Safari Date" required
+        style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+      
+      <input type="number" name="number_of_people" placeholder="Number of People" min="1" required
+        style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+      
+      <textarea name="message" placeholder="Your Message or Special Requests" rows="5"
+        style="padding: 12px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
 
-    <button type="submit" style="background: #fbb03b; color: white; padding: 14px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
-      Book Now
-    </button>
-  </form>
+      <button type="submit"
+        style="background: #fbb03b; color: white; padding: 14px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+        Book Now
+      </button>
+    </form>
+  </div>
 </section>
 
 <footer>
