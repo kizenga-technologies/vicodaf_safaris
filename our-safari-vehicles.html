@@ -110,75 +110,7 @@
   @media (max-width: 480px) {
     #heroSlider { height: 400px; }
   }
-
-    header nav ul li {
-    position: relative;
-  }
-
-  header nav ul li a {
-    text-decoration: none;
-    color: #0b2239;
-    font-weight: 500;
-  }
-
-  .submenu {
-    display: none;
-    position: absolute;
-    background: #fff;
-    top: 100%;
-    left: 0;
-    min-width: 180px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    z-index: 9999;
-    padding: 10px 0;
-  }
-
-  .submenu li {
-    padding: 5px 15px;
-  }
-
-  .submenu li a {
-    color: #0b2239;
-    text-decoration: none;
-  }
-
-  /* Hover dropdowns (desktop) */
-  .has-submenu:hover .submenu {
-    display: block;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    #burger {
-      display: block !important;
-    }
-
-    #mainNav {
-      width: 100%;
-      display: none;
-    }
-
-    #menuList {
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .submenu {
-      position: static;
-      box-shadow: none;
-      padding-left: 15px;
-    }
-
-    .has-submenu > a::after {
-      content: " ▼";
-      font-size: 0.7em;
-    }
-
-    .has-submenu.open .submenu {
-      display: block;
-    }
-  }
-
+   
 #heroSlider {
     position: relative;
     overflow: hidden;
@@ -317,6 +249,156 @@
       header.hero h1 { font-size: 2em; }
     }
 
+      header {
+      position: relative;
+      background-color: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      flex-shrink: 0;
+    }
+
+    .menu-toggle {
+      display: none; /* hidden on desktop */
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0b2239;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #fbb03b;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      z-index: 999;
+      border-radius: 4px;
+      min-width: 250px;
+      top: 100%;
+      left: 0;
+    }
+
+    .submenu li {
+      padding: 5px 20px;
+      white-space: nowrap;
+    }
+
+    .has-submenu:hover > .submenu {
+      display: block;
+    }
+
+    .submenu .has-submenu {
+      position: relative;
+    }
+
+    .submenu .has-submenu:hover > .submenu {
+      display: block;
+      top: 0;
+      left: 100%;
+    }
+
+    /* MOBILE STYLES */
+    @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: block; /* show on mobile only */
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 270px;
+        background: #fff;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+        transition: left 0.3s ease;
+      }
+
+      nav.open {
+        left: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+      }
+
+      .submenu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background: #f9f9f9;
+      }
+
+      .has-submenu.open > .submenu {
+        display: block;
+      }
+
+      .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background: #0b2239;
+        color: white;
+        font-size: 18px;
+      }
+
+      #close-menu {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+      }
+    }
+
+    /* Hide mobile header and close button on desktop */
+    .mobile-header,
+    #close-menu {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .mobile-header,
+      #close-menu {
+        display: flex;
+      }
+    }
+
   </style>
 </head>
 <body id="home">
@@ -346,18 +428,26 @@
   </div>
 </div>
 
-<!-- Navigation -->
-<header style="background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); position:sticky; top:0; z-index:999;">
-  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:15px 20px; flex-wrap:wrap;">
-    <a href="index.html"><img src="images/vicodaf_logo.png" style="height:50px; border-radius: 50%;"></a>
-    <div onclick="toggleMenu()" style="display:none; font-size:24px; cursor:pointer;" id="burger">&#9776;</div>
-    <nav id="mainNav" style="display:flex; flex-wrap:wrap;">
-      <ul style="list-style:none; display:flex; flex-direction:row; flex-wrap:wrap; margin:0; padding:0; align-items:center; gap:20px;" id="menuList">
+<script>
+function changeLang(lang) {
+  alert("Language changed to: " + lang + " (not implemented)");
+}
 
+   <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/vicodaf_logo.png" style="height:50px; border-radius: 50%;" alt="Vicodaf Safaris"></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <div class="mobile-header">
+        <span>Menu</span>
+        <button id="close-menu">&times;</button>
+      </div>
+      <ul>
         <li><a href="index.html">Home</a></li>
 
         <li class="has-submenu">
-          <a href="#">About Us</a>
+          <a href="#">About Us &#9662;</a>
           <ul class="submenu">
             <li><a href="about.html">About Us</a></li>
             <li><a href="our-safari-vehicles.html">Our Safari Vehicles</a></li>
@@ -367,134 +457,93 @@
         <li><a href="safaris.html">Safaris</a></li>
 
         <li class="has-submenu">
-          <a href="#">Destinations</a>
+          <a href="#">Destinations &#9662;</a>
           <ul class="submenu">
-            <li><a href="serengeti.html">Serengeti</a></li>
-            <li><a href="ngorongoro.html">Ngorongoro</a></li>
-            <li><a href="tarangire.html">Tarangire</a></li>
+            <li><a href="ngorongoro.html">Ngorongoro Crater</a></li>
+            <li><a href="serengeti.html">Serengeti National Park</a></li>
             <li><a href="manyara.html">Lake Manyara</a></li>
-            <li><a href="arusha.html">Arusha NP</a></li>
-            <li><a href="ruaha.html">Ruaha</a></li>
-            <li><a href="selous.html">Selous</a></li>
-            <li><a href="mikumi.html">Mikumi</a></li>
-            <li><a href="zanzibar.html">Zanzibar</a></li>
-            <li><a href="mkomazi.html">Mkomazi</a></li>
+            <li><a href="tarangire.html">Tarangire National Park</a></li>
+            <li><a href="arusha.html">Arusha National Park</a></li>
+            <li><a href="mkomazi.html">Mkomazi National Park</a></li>
+            <li><a href="ruaha.html">Ruaha National Park</a></li>
+            <li><a href="selous.html">Selous Game Reserve</a></li>
+            <li><a href="mikumi.html">Mikumi National Park</a></li>
+            <li><a href="zanzibar.html">Zanzibar Island</a></li>
           </ul>
         </li>
 
         <li class="has-submenu">
-          <a href="#">Climbing</a>
+          <a href="#">Climbing &#9662;</a>
           <ul class="submenu">
-            <li><a href="#">Mount Kilimanjaro</a></li>
-            <li><a href="#">Mount Meru</a></li>
-            <li><a href="#">Ol Doinyo Lengai</a></li>
+            <li class="has-submenu">
+              <a href="#">Mount Kilimanjaro &#9656;</a>
+              <ul class="submenu">
+                <li><a href="umbwe-route.html">Umbwe Route</a></li>
+                <li><a href="lemosho-route.html">Lemosho Route</a></li>
+                <li><a href="marangu-route.html">Marangu Route</a></li>
+                <li><a href="machame-route.html">Machame Route</a></li>
+                <li><a href="rongai-route.html">Rongai Route</a></li>
+                <li><a href="shira-londrosi-route.html">Shira-Londrosi Route</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">Mount Meru &#9656;</a>
+              <ul class="submenu">
+                <li><a href="3-days-mount-meru.html">3 Days Mount Meru Trekking</a></li>
+                <li><a href="4-days-mount-meru.html">4 Days Best Mount Meru Trekking Adventure</a></li>
+              </ul>
+            </li>
+            <li><a href="mount-longido.html">Mount Longido Trekking</a></li>
           </ul>
         </li>
 
         <li class="has-submenu">
-          <a href="#">Experiences</a>
+          <a href="#">Experiences &#9662;</a>
           <ul class="submenu">
-            <li><a href="#">Hot Air Balloon</a></li>
-            <li><a href="#">Cultural Tours</a></li>
-            <li><a href="#">Bird Watching</a></li>
-            <li><a href="#">Walking Safaris</a></li>
-            <li><a href="#">Honeymoon Safari</a></li>
+            <li><a href="hot-air-balloon.html">Hot Air Balloon Safari</a></li>
+            <li><a href="cultural-tours.html">Cultural Tours</a></li>
+            <li><a href="photographic-safaris.html">Photographic Safaris</a></li>
           </ul>
         </li>
 
         <li class="has-submenu">
-          <a href="#">Day Trips</a>
+          <a href="#">Day Trips &#9662;</a>
           <ul class="submenu">
-            <li><a href="#">Arusha Park</a></li>
-            <li><a href="#">Lake Duluti</a></li>
-            <li><a href="#">Materuni Waterfalls</a></li>
-            <li><a href="#">Chemka Hot Springs</a></li>
-            <li><a href="#">Kikuletwa</a></li>
+            <li><a href="arusha-day-trip.html">Arusha Day Trip</a></li>
+            <li><a href="manyara-day-trip.html">Lake Manyara Day Trip</a></li>
+            <li><a href="tarangire-day-trip.html">Tarangire Day Trip</a></li>
+            <li><a href="ngorongoro-day-trip.html">Ngorongoro Day Trip</a></li>
           </ul>
         </li>
 
         <li><a href="contact.html">Contact</a></li>
-
       </ul>
     </nav>
-  </div>
-</header>
+  </header>
 
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('mainNav');
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-  }
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const closeMenu = document.getElementById('close-menu');
 
-  // Toggle submenu for mobile
-  document.querySelectorAll('.has-submenu > a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        const parent = this.parentElement;
-        parent.classList.toggle('open');
-      }
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.add('open');
     });
-  });
-</script>
 
-<script>
-function changeLang(lang) {
-  alert("Language changed to: " + lang + " (not implemented)");
-}
-
-function toggleMenu() {
-  const nav = document.getElementById("mainNav");
-  if (nav.style.display === "flex") {
-    nav.style.display = "none";
-  } else {
-    nav.style.display = "flex";
-    nav.style.flexDirection = "column";
-    nav.style.background = "#fff";
-    nav.style.position = "absolute";
-    nav.style.top = "80px";
-    nav.style.left = "0";
-    nav.style.width = "100%";
-    nav.style.padding = "15px 20px";
-    nav.style.boxShadow = "0 8px 16px rgba(0,0,0,0.1)";
-  }
-}
-
-window.addEventListener("resize", function() {
-  if (window.innerWidth > 768) {
-    document.getElementById("mainNav").style.display = "flex";
-    document.getElementById("mainNav").style.flexDirection = "row";
-    document.getElementById("mainNav").style.position = "static";
-    document.getElementById("mainNav").style.boxShadow = "none";
-  } else {
-    document.getElementById("mainNav").style.display = "none";
-  }
-});
-
-// Initial check
-if (window.innerWidth <= 768) {
-  document.getElementById("mainNav").style.display = "none";
-  document.getElementById("hamburger").style.display = "block";
-}
-</script>
-
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('mainNav');
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-  }
-
-  // Toggle submenu for mobile
-  document.querySelectorAll('.has-submenu > a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        const parent = this.parentElement;
-        parent.classList.toggle('open');
-      }
+    closeMenu.addEventListener('click', () => {
+      navMenu.classList.remove('open');
     });
-  });
-</script>
+
+    const submenuToggles = document.querySelectorAll('.has-submenu');
+    submenuToggles.forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.stopPropagation();
+          this.classList.toggle('open');
+        }
+      });
+    });
+  </script>
   
 <script>
   let slideIndex = 0;
