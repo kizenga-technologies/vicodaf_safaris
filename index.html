@@ -293,6 +293,7 @@
 function changeLang(lang) {
   alert("Language changed to: " + lang + " (not implemented)");
 }
+</script>
 
  <header>
     <div class="logo">
@@ -436,24 +437,6 @@ function changeLang(lang) {
   </div>
 
 </div>
-
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('mainNav');
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-  }
-
-  // Toggle submenu for mobile
-  document.querySelectorAll('.has-submenu > a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        const parent = this.parentElement;
-        parent.classList.toggle('open');
-      }
-    });
-  });
-</script>
   
 <script>
   let slideIndex = 0;
