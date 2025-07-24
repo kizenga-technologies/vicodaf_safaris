@@ -577,8 +577,106 @@ function changeLang(lang) {
     <h1>Marangu Route-Kilimanjaro Trekking</h1>
   </header>
 
+<section class="content-section">
+  <h1 style="color: #0b2239;">Marangu Route</h1>
+  <p>The Marangu Route, known as the “Coca-Cola” route, is one of the most popular ways to summit Mount Kilimanjaro. It is the only route that offers hut accommodations throughout the trek. This scenic path offers views of lush rainforest, alpine moorlands, and finally a lunar landscape at higher altitudes. Perfect for climbers who prefer a more comfortable and gradual ascent.</p>
 
-  
+  <h2 style="color: #0b2239;">Marangu Route Prices</h2>
+  <ul>
+    <li>5 Days Marangu Route: <strong>$300 per day per person</strong> (Total: <strong>$1,500</strong>)</li>
+    <li>6 Days Marangu Route: <strong>$300 per day per person</strong> (Total: <strong>$1,800</strong>)</li>
+  </ul>
+
+  <h2 style="color: #0b2239;">Included in the Price</h2>
+  <ul>
+    <li>National Park gate fees</li>
+    <li>Transport from Moshi to starting point and return</li>
+    <li>Hut accommodation</li>
+    <li>Certified English-speaking guides and porters</li>
+    <li>Rescue fees</li>
+    <li>All meals on the mountain</li>
+    <li>Cooking equipment and utensils</li>
+    <li>Airport transfers</li>
+    <li>2 nights hotel accommodation in Moshi</li>
+  </ul>
+
+  <h2 style="color: #0b2239;">Not Included</h2>
+  <ul>
+    <li>Mountain gear (available for hire)</li>
+    <li>Lunches, dinners, and drinks at the hotel in Moshi</li>
+    <li>Tips for guides and porters</li>
+  </ul>
+
+  <h2 style="color: #0b2239;">Visa & Travel Info</h2>
+  <p>Tourist visas cost $50 (non-American) or $100 (American citizens) for a 3-month stay. Apply online at <a href="http://www.immigration.go.tz" target="_blank">immigration.go.tz</a>.</p>
+
+  <h2 style="color: #0b2239;">Tips to Avoid Altitude Sickness</h2>
+  <ul>
+    <li>Ascend slowly (“Pole, pole” pace)</li>
+    <li>Climb high, sleep low</li>
+    <li>Stay hydrated (4–5 liters/day)</li>
+    <li>Eat high-calorie meals</li>
+    <li>Descend immediately if symptoms worsen</li>
+  </ul>
+
+  <h2 style="color: #0b2239;">Mountain Meals Overview</h2>
+  <p>Expect nourishing meals including fresh fruit, porridge, eggs, sandwiches, pasta, rice, meat and vegetable dishes, and hot drinks. Midnight snacks are served before summit attempts.</p>
+
+  <h2 style="color: #0b2239;">Detailed Itineraries</h2>
+
+  <details>
+    <summary><strong>5 Days Marangu Route Itinerary</strong></summary>
+    <ul>
+      <li><strong>Day 1:</strong> Hotel to Mandara Hut – 8km (3–4 hrs), rainforest. Side trip to Maundi Crater.</li>
+      <li><strong>Day 2:</strong> Mandara to Horombo Hut – 12km (5–6 hrs), moorland. Stunning views of Mawenzi and Kibo.</li>
+      <li><strong>Day 3:</strong> Horombo to Kibo Hut – 9km (5–6 hrs), moonscape terrain between peaks.</li>
+      <li><strong>Day 4:</strong> Kibo to Uhuru Peak and descend to Horombo – 21km total (12–16 hrs), summit and return.</li>
+      <li><strong>Day 5:</strong> Horombo to Marangu Gate – 20km (4–5 hrs), forest descent, return to Moshi hotel.</li>
+    </ul>
+  </details>
+
+  <details style="margin-top: 20px;">
+    <summary><strong>6 Days Marangu Route Itinerary</strong></summary>
+    <ul>
+      <li><strong>Day 1:</strong> Hotel to Mandara Hut – 8km (3–4 hrs), rainforest walk.</li>
+      <li><strong>Day 2:</strong> Mandara to Horombo Hut – 12km (5–6 hrs), breathtaking views of Kibo & Mawenzi.</li>
+      <li><strong>Day 3:</strong> Horombo Hut (Acclimatization Day).</li>
+      <li><strong>Day 4:</strong> Horombo to Kibo Hut – 9km (5–6 hrs), moonscape terrain.</li>
+      <li><strong>Day 5:</strong> Kibo to Summit, then descend to Horombo – 21km (12–16 hrs), summit day.</li>
+      <li><strong>Day 6:</strong> Horombo to Marangu Gate – 20km (4–5 hrs), forest trail, return to hotel in Moshi.</li>
+    </ul>
+  </details>
+</section>
+
+<!-- Booking Form -->
+<section class="booking-form" style="margin-top: 50px;">
+  <h2 style="color: #0b2239;">Book the Marangu Route Trek</h2>
+  <form action="booking-handler.php" method="POST" style="max-width: 600px; margin: auto;">
+    <div style="margin-bottom: 15px;">
+      <input type="text" name="fullname" placeholder="Full Name" required style="width: 100%; padding: 10px;">
+    </div>
+    <div style="margin-bottom: 15px;">
+      <input type="email" name="email" placeholder="Email Address" required style="width: 100%; padding: 10px;">
+    </div>
+    <div style="margin-bottom: 15px;">
+      <input type="date" name="date" required style="width: 100%; padding: 10px;">
+    </div>
+    <div style="margin-bottom: 15px;">
+      <input type="number" name="people" placeholder="Number of People" min="1" required style="width: 100%; padding: 10px;">
+    </div>
+    <div style="margin-bottom: 20px;">
+      <select name="trek_option" required style="width: 100%; padding: 10px;">
+        <option value="">-- Select Trek Option --</option>
+        <option value="5 Days Marangu Route">5 Days Marangu Route</option>
+        <option value="6 Days Marangu Route">6 Days Marangu Route</option>
+      </select>
+    </div>
+    <div>
+      <button type="submit" style="background-color: #fbb03b; color: #fff; padding: 12px 20px; border: none; cursor: pointer; width: 100%; font-size: 16px;">Book Now</button>
+    </div>
+  </form>
+</section>
+
 <footer>
   <div class="footer-grid">
     <div><h4>Contact</h4><p>Phone: +255 679 515 834</p><p>Email: info@vicodafsafaris.co.tz</p></div>
