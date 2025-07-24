@@ -651,21 +651,26 @@ function changeLang(lang) {
 <!-- Booking Form -->
 <section class="booking-form" style="margin-top: 50px;">
   <h2 style="color: #0b2239;">Book the Marangu Route Trek</h2>
-  <form action="booking-handler.php" method="POST" style="max-width: 600px; margin: auto;">
+  <form action="https://formsubmit.co/nasalprog@gmail.com" method="POST" style="max-width: 600px; margin: auto;">
+    <!-- Hiding formsubmit honeypot and captcha -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Marangu Route Booking Request">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://kizenga-technologies.github.io/vicodaf_safaris/thank-you.html">
     <div style="margin-bottom: 15px;">
-      <input type="text" name="fullname" placeholder="Full Name" required style="width: 100%; padding: 10px;">
+      <input type="text" name="Full Name" placeholder="Full Name" required style="width: 100%; padding: 10px;">
     </div>
     <div style="margin-bottom: 15px;">
-      <input type="email" name="email" placeholder="Email Address" required style="width: 100%; padding: 10px;">
+      <input type="email" name="Email Address" placeholder="Email Address" required style="width: 100%; padding: 10px;">
     </div>
     <div style="margin-bottom: 15px;">
-      <input type="date" name="date" required style="width: 100%; padding: 10px;">
+      <input type="date" name="Preferred Date" required style="width: 100%; padding: 10px;">
     </div>
     <div style="margin-bottom: 15px;">
-      <input type="number" name="people" placeholder="Number of People" min="1" required style="width: 100%; padding: 10px;">
+      <input type="number" name="Number of People" placeholder="Number of People" min="1" required style="width: 100%; padding: 10px;">
     </div>
     <div style="margin-bottom: 20px;">
-      <select name="trek_option" required style="width: 100%; padding: 10px;">
+      <select name="Trek Option" required style="width: 100%; padding: 10px;">
         <option value="">-- Select Trek Option --</option>
         <option value="5 Days Marangu Route">5 Days Marangu Route</option>
         <option value="6 Days Marangu Route">6 Days Marangu Route</option>
