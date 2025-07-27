@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 Days 1 Night Safari – Tarangire & Ngorongoro Crater (Private)</title>
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/header-nav.css">
+  <link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #fdfcf9; color: #1a1a1a; scroll-behavior: smooth; }
+        
+    section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+    section h2 { text-align: center; color: #0b2239; margin-bottom: 30px; }
+    .packages, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card h3, .card p { padding: 15px; margin: 0; }
+    iframe { width: 100%; height: ; border-radius: 10px; border: none; }
+    .feedbacks { background-color: #fff8ed; }
+    .feedback-slide { display: flex; overflow-x: auto; gap: 20px; padding: 20px 0; }
+    .feedback { min-width: 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+    .feedback img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
+    .feedback p { font-style: italic; }
+    .feedback h4 { margin-top: 10px; color: #0b2239; }
+    footer { background-color: #0b2239; color: white; padding: 40px 20px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .footer-grid h4 { color: #fbb03b; margin-bottom: 10px; }
+    .social-icons a { color: white; font-size: 1.4em; margin-right: 10px; text-decoration: none; }
+    .developer { text-align: center; border-top: 1px solid #444; padding-top: 10px; }
+    .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; padding: 15px; font-size: 24px;    z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+    .whatsapp-btn:hover { background-color: #128c7e; }
+    
+  @keyframes zoomSlide {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+
+  #heroSlider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: 600px;
+  }
+
+  .heroSlide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+  }
+
+  .heroSlide.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .heroSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  .zooming {
+    animation: zoomSlide 10s ease-in-out infinite alternate;
+  }
+
+  .text-overlay {
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+
+  .heroSlide h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  .heroSlide p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .heroSlide a {
+    background: #fbb03b;
+    color: #0b2239;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    #heroSlider { height: 300px; }
+    .heroSlide h2 { font-size: 1.5em; }
+    .heroSlide p { font-size: 1em; }
+    .heroSlide a { font-size: 0.9em; padding: 10px 20px; }
+  }
+
+  @media (max-width: 480px) {
+    #heroSlider { height: 400px; }
+  }
+
+#heroSlider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: 600px;
+  }
+
+  .heroSlide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+  }
+
+  .heroSlide.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .heroSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  .zooming {
+    animation: zoomSlide 10s ease-in-out infinite alternate;
+  }
+
+  .text-overlay {
+    position: absolute;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+
+  .heroSlide h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  .heroSlide p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .heroSlide a {
+    background: #fbb03b;
+    color: #0b2239;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    #heroSlider { height: 300px; }
+    .heroSlide h2 { font-size: 1.5em; }
+    .heroSlide p { font-size: 1em; }
+    .heroSlide a { font-size: 0.9em; padding: 10px 20px; }
+  }
+
+  @media (max-width: 480px) {
+    #heroSlider { height: 300px; }
+  }
+    
+    header.hero {
+      background: url('images/ruaha-banner.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+    header.hero h1 {
+      font-size: 3em;
+    }
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    .section h2 {
+      font-size: 2.5em;
+      color: #0b2239;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .two-columns > div {
+      flex: 1;
+      min-width: 280px;
+    }
+    .highlight-box {
+      background: #fdfcf9;
+      padding: 30px;
+      border-left: 5px solid #fbb03b;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .values {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .value-box {
+      flex: 1;
+      min-width: 250px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .value-box i {
+      color: #fbb03b;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .two-columns { flex-direction: column; }
+      ul.nav-links { flex-direction: column; gap: 10px; }
+      header.hero h1 { font-size: 2em; }
+    }
+
+      header {
+      position: relative;
+      background-color: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      flex-shrink: 0;
+    }
+
+    .menu-toggle {
+      display: none; /* hidden on desktop */
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0b2239;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #fbb03b;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      z-index: 999;
+      border-radius: 4px;
+      min-width: 250px;
+      top: 100%;
+      left: 0;
+    }
+
+    .submenu li {
+      padding: 5px 20px;
+      white-space: nowrap;
+    }
+
+    .has-submenu:hover > .submenu {
+      display: block;
+    }
+
+    .submenu .has-submenu {
+      position: relative;
+    }
+
+    .submenu .has-submenu:hover > .submenu {
+      display: block;
+      top: 0;
+      left: 100%;
+    }
+
+    /* MOBILE STYLES */
+    @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: block; /* show on mobile only */
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 270px;
+        background: #fff;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+        transition: left 0.3s ease;
+      }
+
+      nav.open {
+        left: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+      }
+
+      .submenu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background: #f9f9f9;
+      }
+
+      .has-submenu.open > .submenu {
+        display: block;
+      }
+
+      .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background: #0b2239;
+        color: white;
+        font-size: 18px;
+      }
+
+      #close-menu {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+      }
+    }
+
+    /* Hide mobile header and close button on desktop */
+    .mobile-header,
+    #close-menu {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .mobile-header,
+      #close-menu {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body id="home">
+
+<a href="https://wa.me/679515834?text=Hello Vicodaf Safaris. (Message Initiated from Website)" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+  <!-- Header Top -->
+<div style="background:#f4f4f4; padding:10px 20px; font-size:14px; border-bottom:1px solid #ccc;">
+  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center;">
+    <!-- Left -->
+    <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+      <span><img src="icons/email2.svg" style="height:14px; margin-right:5px;"> info@vicodafsafaris.com | <span><img src="icons/email2.svg" style="height:14px; margin-right:5px;"> bookings@vicodafsafaris.com</span>
+      <span><img src="icons/whatsapp.svg" style="height:14px; margin-right:5px;"> +255 712 345 678</span>
+      <span><img src="icons/location.svg" style="height:14px; margin-right:5px;"> Arusha, Tanzania</span>
+    </div>
+    <!-- Right -->
+    <div style="display:flex; gap:10px; align-items:center; margin-top:5px;">
+      <button style="background:none; border:none;"><img src="flags/us.png" style="height:16px;"> EN</button>
+      <button style="background:none; border:none;"><img src="flags/de.png" style="height:16px;"> DE</button>
+      <button style="background:none; border:none;"><img src="flags/fr.png" style="height:16px;"> FR</button>
+      <button style="background:none; border:none;"><img src="flags/it.png" style="height:16px;"> IT</button>
+      <button style="background:none; border:none;"><img src="flags/es.png" style="height:16px;"> ES</button>
+      <button style="background:none; border:none;"><img src="flags/cn.png" style="height:16px;"> CN</button>
+      <button style="background:none; border:none;"><img src="flags/jp.png" style="height:16px;"> JP</button>
+      <button style="background:none; border:none;"><img src="flags/ru.png" style="height:16px;"> RU</button>
+    </div>
+  </div>
+</div>
+
+<script>  
+function changeLang(lang) {
+  alert("Language changed to: " + lang + " (not implemented)");
+}
+</script>
+ <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/vicodaf_logo.png" style="height:50px; border-radius: 50%;" alt="Vicodaf Safaris"></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="nav-menu">
+      <div class="mobile-header">
+        <span>Menu</span>
+        <button id="close-menu">&times;</button>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li class="has-submenu">
+          <a href="#">About Us &#9662;</a>
+          <ul class="submenu">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="our-safari-vehicles.html">Our Safari Vehicles</a></li>
+          </ul>
+        </li>
+
+        <li><a href="safaris.html">Safaris</a></li>
+
+        <li class="has-submenu">
+          <a href="#">Destinations &#9662;</a>
+          <ul class="submenu">
+            <li><a href="ngorongoro.html">Ngorongoro Crater</a></li>
+            <li><a href="serengeti.html">Serengeti National Park</a></li>
+            <li><a href="manyara.html">Lake Manyara</a></li>
+            <li><a href="tarangire.html">Tarangire National Park</a></li>
+            <li><a href="arusha.html">Arusha National Park</a></li>
+            <li><a href="mkomazi.html">Mkomazi National Park</a></li>
+            <li><a href="ruaha.html">Ruaha National Park</a></li>
+            <li><a href="selous.html">Selous Game Reserve</a></li>
+            <li><a href="mikumi.html">Mikumi National Park</a></li>
+            <li><a href="zanzibar.html">Zanzibar Island</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="#">Climbing &#9662;</a>
+          <ul class="submenu">
+            <li class="has-submenu">
+              <a href="#">Mount Kilimanjaro &#9656;</a>
+              <ul class="submenu">
+                <li><a href="umbwe-route.html">Umbwe Route</a></li>
+                <li><a href="lemosho-route.html">Lemosho Route</a></li>
+                <li><a href="marangu-route.html">Marangu Route</a></li>
+                <li><a href="machame-route.html">Machame Route</a></li>
+                <li><a href="rongai-route.html">Rongai Route</a></li>
+                <li><a href="shira-londrosi-route.html">Shira-Londrosi Route</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">Mount Meru &#9656;</a>
+              <ul class="submenu">
+                <li><a href="3-days-mount-meru.html">3 Days Mount Meru Trekking</a></li>
+                <li><a href="4-days-mount-meru.html">4 Days Best Mount Meru Trekking Adventure</a></li>
+              </ul>
+            </li>
+            <li><a href="mount-longido.html">Mount Longido Trekking</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="#">Experiences &#9662;</a>
+          <ul class="submenu">
+            <li><a href="hot-air-balloon.html">Hot Air Balloon Safari</a></li>
+            <li><a href="cultural-tours.html">Cultural Tours</a></li>
+            <li><a href="photographic-safaris.html">Photographic Safaris</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="#">Day Trips &#9662;</a>
+          <ul class="submenu">
+            <li><a href="arusha-day-trip.html">Arusha Day Trip</a></li>
+            <li><a href="manyara-day-trip.html">Lake Manyara Day Trip</a></li>
+            <li><a href="tarangire-day-trip.html">Tarangire Day Trip</a></li>
+            <li><a href="ngorongoro-day-trip.html">Ngorongoro Day Trip</a></li>
+          </ul>
+        </li>
+
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const closeMenu = document.getElementById('close-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.add('open');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+    });
+
+    const submenuToggles = document.querySelectorAll('.has-submenu');
+    submenuToggles.forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.stopPropagation();
+          this.classList.toggle('open');
+        }
+      });
+    });
+  </script>
+  
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.heroSlide');
+
+  function showSlide() {
+    slides.forEach((slide, index) => {
+      const img = slide.querySelector('img');
+      slide.classList.remove('active');
+      img.classList.remove('zooming');
+    });
+
+    slideIndex = (slideIndex + 1) % slides.length;
+    const currentSlide = slides[slideIndex];
+    currentSlide.classList.add('active');
+
+    // Force restart animation
+    const img = currentSlide.querySelector('img');
+    void img.offsetWidth; // Trigger reflow
+    img.classList.add('zooming');
+  }
+
+  setInterval(showSlide, 6000);
+
+  // Initial zoom start
+  const firstImg = document.querySelector('.heroSlide.active img');
+  firstImg.classList.add('zooming');
+</script> 
+
+<!-- Banner Section -->
+  <header class="hero">
+    <h1>2 Days 1 Night Safari – Tarangire & Ngorongoro Crater (Private)</h1>
+  </header>
+
+<section style="padding: 40px 20px; max-width: 960px; margin: auto;">
+  <h1 style="color: #0b2239; font-size: 2.4rem; margin-bottom: 20px;">2 Days 1 Night Safari – Tarangire & Ngorongoro Crater (Private)</h1>
+
+  <p style="font-size: 1.1rem; line-height: 1.7;">
+    Discover Tanzania’s stunning wildlife and landscapes on this short but immersive private safari adventure. Visit two of the most iconic national parks — Tarangire and Ngorongoro Crater — in just two days. Perfect for travelers with limited time seeking an unforgettable safari experience.
+  </p>
+
+  <h2 style="color: #0b2239; margin-top: 30px;">🦁 Detailed Itinerary</h2>
+
+  <details style="margin-bottom: 15px;">
+    <summary style="cursor: pointer; font-weight: bold;">Day 1: Arusha to Tarangire National Park</summary>
+    <p style="margin-top: 10px;">
+      Pick-up from your hotel in Arusha in the morning and drive to Tarangire National Park. Known for its majestic baobab trees and large elephant herds, the park offers incredible game viewing opportunities. Enjoy a picnic lunch and a full afternoon game drive before heading to Karatu for dinner and overnight at a cozy lodge.
+    </p>
+  </details>
+
+  <details style="margin-bottom: 15px;">
+    <summary style="cursor: pointer; font-weight: bold;">Day 2: Ngorongoro Crater - Return to Arusha</summary>
+    <p style="margin-top: 10px;">
+      After breakfast, travel to the Ngorongoro Crater, one of Africa’s most famous wildlife destinations. Descend into the crater for a half-day game drive with chances to spot the Big Five. Enjoy a picnic lunch at the hippo pool before ascending and driving back to Arusha in the late afternoon.
+    </p>
+  </details>
+
+  <h2 style="color: #0b2239; margin-top: 30px;">✅ Safari Price Includes</h2>
+  <ul style="line-height: 1.8;">
+    <li>✔️ Park entrance fees</li>
+    <li>✔️ Full board accommodation (breakfast, lunch, dinner)</li>
+    <li>✔️ Professional English-speaking guide</li>
+    <li>✔️ Safari cruiser with pop-up roof</li>
+    <li>✔️ Game drives and crater services</li>
+    <li>✔️ Drinking water</li>
+    <li>✔️ Transportation</li>
+    <li>✔️ Domestic flight tickets</li>
+  </ul>
+
+  <h2 style="color: #0b2239; margin-top: 30px;">❌ Price Excludes</h2>
+  <ul style="line-height: 1.8;">
+    <li>❌ Tips for guide</li>
+    <li>❌ Personal items</li>
+  </ul>
+
+  <p style="margin-top: 20px; font-size: 1.05rem;">
+    📲 For bookings or questions, reach us on WhatsApp:
+    <a href="https://wa.me/255679515834" target="_blank">+255 679 515 834</a>
+  </p>
+
+  <h2 style="color: #0b2239; margin-top: 40px;">📝 Book This Safari</h2>
+  <form action="https://formsubmit.co/vicodafsafaris@gmail.com" method="POST" style="background-color: #f9f9f9; padding: 30px; border-radius: 10px; max-width: 600px; margin: 30px auto;">
+    <input type="hidden" name="_next" value="https://vicodafsafaris.co.tz/thank-you.html">
+    <input type="hidden" name="safari_package" value="2 Days Tarangire & Ngorongoro Private Safari">
+
+    <div style="margin-bottom: 15px;">
+      <input type="text" name="name" placeholder="Your Full Name" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <input type="email" name="email" placeholder="Your Email Address" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <input type="tel" name="phone" placeholder="Phone Number (Optional)" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <input type="date" name="safari_date" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <input type="number" name="number_of_people" placeholder="Number of People" required min="1" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <textarea name="message" placeholder="Any special requests or questions?" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+    </div>
+
+    <button type="submit" style="background-color: #fbb03b; color: white; padding: 14px 30px; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer;">
+      Book Now
+    </button>
+  </form>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><h4>Contact</h4><p>Phone: +255 679 515 834</p><p>Email: info@vicodafsafaris.co.tz</p></div>
+    <div><h4>Working Hours</h4><p>Mon - Fri: 8:00 AM - 6:00 PM</p><p>Sat: 9:00 AM - 2:00 PM</p><p>Sun: Closed</p></div>
+    <div><h4>Social Media</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61577646479957"><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-youtube"></i></a>
+        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/679515834?text=Hello Vicodaf Safaris. (Message Initiated from Website)"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div><h4></h4><p><strong></strong></p><p><a href="#" style="color:#fbb03b;"></a></p></div>
+  </div>
+  <div class="developer">
+    <p>&copy; 2025 Vicodaf Safaris. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+let slideIndex = 0;
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 4000);
+}
+showSlides();
+function toggleMenu() {
+  const nav = document.getElementById("navMenu");
+  nav.classList.toggle("active");
+}
+function collapseMenu() {
+  const nav = document.getElementById("navMenu");
+  if (window.innerWidth <= 768) {
+    nav.classList.remove("active");
+  }
+}
+</script>
+</body>
+</html>
