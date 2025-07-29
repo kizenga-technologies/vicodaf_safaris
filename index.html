@@ -225,6 +225,14 @@
         background: #f9f9f9;
       }
 
+      .submenu-left {
+  left: auto;
+  right: 100%;
+}
+.submenu .submenu-left {
+  top: 0;
+}
+
       .has-submenu.open > .submenu {
         display: block;
       }
@@ -339,7 +347,7 @@ function changeLang(lang) {
           <ul class="submenu">
             <li class="has-submenu">
               <a href="#">Mount Kilimanjaro &#9656;</a>
-              <ul class="submenu">
+              <ul class="submenu submenu-left">
                 <li><a href="umbwe-route.html">Umbwe Route</a></li>
                 <li><a href="lemosho-route.html">Lemosho Route</a></li>
                 <li><a href="marangu-route.html">Marangu Route</a></li>
