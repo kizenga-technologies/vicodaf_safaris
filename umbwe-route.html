@@ -514,8 +514,8 @@
 </ul>
     </nav>
   </header>
-  
-  <script>
+
+    <script>
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
     const closeMenu = document.getElementById('close-menu');
@@ -527,6 +527,17 @@
     closeMenu.addEventListener('click', () => {
       navMenu.classList.remove('open');
     });
+
+    const submenuToggles = document.querySelectorAll('.has-submenu');
+    submenuToggles.forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.stopPropagation();
+          this.classList.toggle('open');
+        }
+      });
+    });
+  </script>
   
 <script>
   let slideIndex = 0;
@@ -754,5 +765,6 @@ function collapseMenu() {
 </script>
 </body>
 </html>
+
 
 
