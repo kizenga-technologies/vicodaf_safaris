@@ -39,7 +39,14 @@
     100% { transform: scale(1.1); }
   }
 
-   @media (max-width: 768px) {
+  #heroSlider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: 600px;
+  }
+
+    @media (max-width: 768px) {
     #heroSlider { height: 300px; }
     .heroSlide h2 { font-size: 1.5em; }
     .heroSlide p { font-size: 1em; }
@@ -48,13 +55,6 @@
 
   @media (max-width: 480px) {
     #heroSlider { height: 400px; }
-  } 
-
-  #heroSlider {
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-    height: 600px;
   }
 
   .heroSlide {
@@ -109,17 +109,6 @@
     border-radius: 5px;
     font-size: 1em;
     text-decoration: none;
-  }
-
-  @media (max-width: 768px) {
-    #heroSlider { height: 300px; }
-    .heroSlide h2 { font-size: 1.5em; }
-    .heroSlide p { font-size: 1em; }
-    .heroSlide a { font-size: 0.9em; padding: 10px 20px; }
-  }
-
-  @media (max-width: 480px) {
-    #heroSlider { height: 400px; }
   }
 
      header {
@@ -995,6 +984,7 @@ function collapseMenu() {
 </script>
 </body>
 </html>
+
 
 
 
